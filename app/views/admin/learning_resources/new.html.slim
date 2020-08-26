@@ -1,0 +1,18 @@
+#learning-resources-new.row
+
+  nav.breadcrumbs
+    = link_to 'Learning Resources', admin_learning_resources_path
+    a.current[href='#'] New
+
+  .panel
+
+    .panel-header
+      h1 New learning resource
+
+    = form_for [:admin, @resource] do |f|
+
+      = render 'form_fields', f: f
+
+      = link_to 'Cancel', admin_learning_resources_path, class: 'button secondary'
+      | &nbsp;
+      = f.submit 'Create learning resource', class: 'button success'

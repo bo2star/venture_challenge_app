@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/customers.json?limit=5&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 26 Sep 2014 22:25:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/99cec9c3-dc8a-45a2-a344-c60ac424e659?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Fcustomers&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      Http-X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      X-Stats-Userid:
+      - '0'
+      X-Stats-Apiclientid:
+      - '166773'
+      X-Stats-Apipermissionid:
+      - '7503229'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - _secure_admin_session_id=4c3ad7f22cd150c2f589e4ffb431d461; path=/; secure;
+        HttpOnly
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 99cec9c3-dc8a-45a2-a344-c60ac424e659
+      P3p:
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      X-Served-With:
+      - ZX_Spectrum/1997 (Sinclair_BASIC)
+    body:
+      encoding: UTF-8
+      string: "{\"customers\":[{\"accepts_marketing\":true,\"created_at\":\"2014-08-06T20:10:23-07:00\",\"email\":\"kelalee@hotmail.com\",\"first_name\":\"Kelly\",\"id\":252251887,\"last_name\":\"Lee\",\"last_order_id\":263905267,\"multipass_identifier\":null,\"note\":null,\"orders_count\":1,\"state\":\"disabled\",\"total_spent\":\"31.36\",\"updated_at\":\"2014-08-09T12:16:14-07:00\",\"verified_email\":true,\"tags\":\"\",\"last_order_name\":\"#1002\",\"default_address\":{\"address1\":\"122
+        Monte Vista Court\",\"address2\":\"\",\"city\":\"North Vancouver\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Kelly\",\"id\":308944483,\"last_name\":\"Lee\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"v7n4n1\",\"name\":\"Kelly Lee\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true},\"addresses\":[{\"address1\":\"122
+        Monte Vista Court\",\"address2\":\"\",\"city\":\"North Vancouver\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Kelly\",\"id\":308944483,\"last_name\":\"Lee\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"v7n4n1\",\"name\":\"Kelly Lee\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true}]},{\"accepts_marketing\":false,\"created_at\":\"2014-07-31T16:40:39-07:00\",\"email\":\"michelle.goodwin@gmail.com\",\"first_name\":\"Michelle\",\"id\":246591087,\"last_name\":\"Goodwin\",\"last_order_id\":null,\"multipass_identifier\":null,\"note\":null,\"orders_count\":0,\"state\":\"disabled\",\"total_spent\":\"0.00\",\"updated_at\":\"2014-07-31T16:40:39-07:00\",\"verified_email\":true,\"tags\":\"\",\"last_order_name\":null,\"default_address\":{\"address1\":\"1521
+        Amelia Street\",\"address2\":\"\",\"city\":\"Victoria\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Michelle\",\"id\":305562035,\"last_name\":\"Goodwin\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V8m 1n4\",\"name\":\"Michelle Goodwin\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true},\"addresses\":[{\"address1\":\"1521
+        Amelia Street\",\"address2\":\"\",\"city\":\"Victoria\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Michelle\",\"id\":305562035,\"last_name\":\"Goodwin\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V8m 1n4\",\"name\":\"Michelle Goodwin\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true}]},{\"accepts_marketing\":false,\"created_at\":\"2014-07-30T23:36:05-07:00\",\"email\":\"dgalpin@keatscamps.com\",\"first_name\":\"Daniel
+        \",\"id\":246202499,\"last_name\":\"Galpin\",\"last_order_id\":265059107,\"multipass_identifier\":null,\"note\":null,\"orders_count\":1,\"state\":\"disabled\",\"total_spent\":\"105.28\",\"updated_at\":\"2014-08-19T14:31:34-07:00\",\"verified_email\":true,\"tags\":\"\",\"last_order_name\":\"#1004\",\"default_address\":{\"address1\":\"#100
+        - 657 Marine Drive\",\"address2\":\"\",\"city\":\"West Vancouver\",\"company\":\"Keats
+        Camps\",\"country\":\"Canada\",\"first_name\":\"Daniel\",\"id\":311333315,\"last_name\":\"Galpin\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V7T 1A4\",\"name\":\"Daniel Galpin\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true},\"addresses\":[{\"address1\":\"951
+        Westview Crescent\",\"address2\":\"\",\"city\":\"North Vancouver\",\"company\":\"Keats
+        Camps\",\"country\":\"Canada\",\"first_name\":\"Daniel \",\"id\":305158251,\"last_name\":\"Galpin\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V7N 3Y3\",\"name\":\"Daniel  Galpin\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":false},{\"address1\":\"#100
+        - 657 Marine Drive\",\"address2\":\"\",\"city\":\"West Vancouver\",\"company\":\"Keats
+        Camps\",\"country\":\"Canada\",\"first_name\":\"Daniel\",\"id\":311333315,\"last_name\":\"Galpin\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V7T 1A4\",\"name\":\"Daniel Galpin\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true}]},{\"accepts_marketing\":true,\"created_at\":\"2014-07-30T23:03:16-07:00\",\"email\":\"calvincarlick@gmail.com\",\"first_name\":\"Calvin\",\"id\":246201731,\"last_name\":\"Carlick\",\"last_order_id\":263353435,\"multipass_identifier\":null,\"note\":null,\"orders_count\":1,\"state\":\"disabled\",\"total_spent\":\"13.60\",\"updated_at\":\"2014-08-05T18:23:36-07:00\",\"verified_email\":true,\"tags\":\"\",\"last_order_name\":\"#1001\",\"default_address\":{\"address1\":\"Box
+        117\",\"address2\":\"Lot 151\",\"city\":\"Iskut\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Calvin\",\"id\":305157403,\"last_name\":\"Carlick\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V0J 1K0\",\"name\":\"Calvin Carlick\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true},\"addresses\":[{\"address1\":\"Box
+        117\",\"address2\":\"Lot 151\",\"city\":\"Iskut\",\"company\":\"\",\"country\":\"Canada\",\"first_name\":\"Calvin\",\"id\":305157403,\"last_name\":\"Carlick\",\"phone\":\"\",\"province\":\"British
+        Columbia\",\"zip\":\"V0J 1K0\",\"name\":\"Calvin Carlick\",\"province_code\":\"BC\",\"country_code\":\"CA\",\"country_name\":\"Canada\",\"default\":true}]}]}"
+    http_version: 
+  recorded_at: Fri, 26 Sep 2014 22:25:58 GMT
+recorded_with: VCR 2.9.0

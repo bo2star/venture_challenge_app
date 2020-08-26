@@ -1,0 +1,70 @@
+# == Schema Information
+#
+# Table name: referrals
+#
+#  id         :integer          not null, primary key
+#  order_id   :integer          indexed
+#  created_at :datetime
+#  updated_at :datetime
+#  url        :text
+#
+# Indexes
+#
+#  index_referrals_on_order_id  (order_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# Referrals for Bob's Team
+
+1266172947:
+  order: 1266172947
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753659:
+  order: 1265753659
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753575:
+  order: 1265753575
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753539:
+  order: 1265753539
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753463:
+  order: 1265753463
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753415:
+  order: 1265753415
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753355:
+  order: 1265753355
+  url: http://r.search.yahoo.com/_ylt=AwrBTv0wsfpTbVAAs3nrFAx.;_ylu=X3oDMTE0Z2lvNjFnBHNlYwNzcgRwb3MDMQRjb2xvA2JmMQR2dGlkA01TWUNBQzFfMQ--/RV=2/RE=1408967088/RO=10/RU=http%3a%2f%2fmarinersinnonline.myshopify.com%2f/RK=0/RS=TyYCVkwLILVPQUvQpoKi_.dwuSE-
+
+1265753327:
+  order: 1265753327
+  url: http://www.google.ca/url?url=http://marinersinnonline.myshopify.com/pages/frontpage&rct=j&frm=1&q=&esrc=s&sa=U&ei=apv3U_HvHdjfoASPr4KQBA&ved=0CBMQFjAA&usg=AFQjCNGOH0qCvwui21uH-vx4cpVsSWi7Vg
+
+1265582319:
+  order: 1265582319
+  url: http://www.google.ca/url?url=http://marinersinnonline.myshopify.com/pages/frontpage&rct=j&frm=1&q=&esrc=s&sa=U&ei=apv3U_HvHdjfoASPr4KQBA&ved=0CBMQFjAA&usg=AFQjCNGOH0qCvwui21uH-vx4cpVsSWi7Vg
+
+1265521463:
+  order: 1265521463
+  url: http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CB4QFjAA&url=http%3A%2F%2Fmarinersinnonline.myshopify.com%2Fpages%2Ffrontpage&ei=jS73U52tOOeR8gGj24GwAw&usg=AFQjCNGkKt9-i82vwuYXv4G_HEEe7NFIhg&sig2=faG9zvqjxh8tq0kVnSOuNQ&bvm=bv.73373277,d.b2U
+
+1264727823:
+  order: 1264727823
+  url: http://marinersinnonline.myshopify.com/cart
+
+1263905267:
+  order: 1263905267
+  url: https://col129.mail.live.com/default.aspx?id=64855
+
+1263353435:
+  order: 1263353435
+  url: http://marinersinnonline.myshopify.com/

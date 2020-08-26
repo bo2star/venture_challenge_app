@@ -1,0 +1,13 @@
+#tasks-index.row
+
+  h1 Tasks
+  p.lead Improve your store and earn extra points for your team by completing these tasks.
+
+  = render @team.pending_tasks.prioritized
+
+  - if @team.completed_tasks.any?
+    .actions
+      = link_to 'Show completed tasks', '#', class: 'button', id: 'toggle-completed'
+
+  .completed-tasks
+    = render @team.completed_tasks.prioritized

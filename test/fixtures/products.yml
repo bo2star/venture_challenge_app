@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id            :integer          not null, primary key
+#  shop_id       :integer          indexed
+#  uid           :string(255)
+#  name          :string(255)
+#  quantity      :integer
+#  total_revenue :float
+#  unit_cost     :float
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+# Indexes
+#
+#  index_products_on_shop_id  (shop_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_id: 
+  uid: MyString
+  name: MyString
+  quantity: 1
+  total_revenue: 1.5
+  unit_cost: 1.5
+
+two:
+  shop_id: 
+  uid: MyString
+  name: MyString
+  quantity: 1
+  total_revenue: 1.5
+  unit_cost: 1.5

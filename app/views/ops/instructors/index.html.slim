@@ -1,0 +1,25 @@
+.row
+
+  h1.page-header
+    label.table-controls
+      | Seeds
+      input#toggle-seeds[type='checkbox']
+
+    .pull-right[style='position: relative; top: -12px; margin-right: 10px;']
+      = link_to 'Seed Instructor', ops_instructors_path, method: :post, class: 'button alert'
+    | Instructors
+
+  table
+
+    thead
+      tr
+        th name
+        th email
+        th phone
+
+    tbody
+      - @instructors.each do |inst|
+        tr[data-seed=inst.seeded?]
+          td= link_to inst.name, [:ops, inst]
+          td= inst.email
+          td= inst.phone

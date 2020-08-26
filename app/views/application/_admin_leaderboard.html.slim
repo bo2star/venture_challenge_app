@@ -1,0 +1,24 @@
+#leaderboard.row
+  - competition.teams_by_points.each do |team|
+
+    .medium-6.columns.team-section
+
+      - pct = (100.0 * team.cached_total_points) / competition.leader_points
+
+      .points[style="background-color: #{team.color};"]= team.cached_total_points.round
+
+      .progress
+        .meter[style="background-color: #{team.color}; width: #{pct}%"]
+
+      .badges= render 'team_badges', team: team
+
+      = link_to [:admin, team], class: 'clearfix' do
+        h4.name= team.name
+
+
+    #teams-show.medium-6.columns
+
+      = render 'team_stats', team: team
+
+    .medium-offset-1.medium-10.columns
+      hr

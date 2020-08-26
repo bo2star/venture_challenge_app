@@ -1,0 +1,39 @@
+.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'Instructors', ops_instructors_path
+      li= link_to @competition.instructor.name, [:ops, @competition.instructor]
+
+  h1.page-header
+    .pull-right
+      - if @competition.seeded?
+        = link_to 'Delete', [:ops, @competition], class: 'button alert', data: { confirm: 'Slow down there, hot shot! Are you sure you want to delete this competition?', method: :delete }
+      =< link_to 'Seed Student', [:seed_student, :ops, @competition], class: 'button alert', data: { confirm: 'Are you sure?', method: :put }
+      =< link_to 'Join', @competition.decorate.join_url, target: '_blank', class: 'button'
+
+    = @competition.name
+
+  p
+
+
+  - @competition.teams.each do |team|
+    .panel
+      .pull-right
+        - if team.launched_shop?
+          = link_to url_with_protocol(team.shop.url), target: '_blank', class: 'button' do
+            | View Shop &nbsp;
+            i.fa.fa-external-link
+
+      h4= team.name
+
+      p.lead
+        - team.students.each do |student|
+          =< link_to [:assume, :ops, student], target: '_blank', method: :put, title: "Assume #{student.name}", class: 'button secondary tiny' do
+            = student.name
+
+  - if @competition.teamless_students.any?
+    .panel
+
+      - @competition.teamless_students.each do |student|
+        =< link_to student.name, [:assume, :ops, student], target: '_blank', method: :put, title: "Assume #{student.name}", class: 'button secondary tiny'

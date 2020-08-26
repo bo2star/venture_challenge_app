@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/orders.json?limit=250&page=1&status=any
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 12 Nov 2014 17:57:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/7f780dbc-0d7f-42ed-9b88-e41d27e0009a?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Forders&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      Set-Cookie:
+      - _secure_admin_session_id=d1a39abf2fb3092dad1c75e4da7c6e7c; path=/; secure;
+        HttpOnly
+      X-Request-Id:
+      - 7f780dbc-0d7f-42ed-9b88-e41d27e0009a
+    body:
+      encoding: UTF-8
+      string: "{\"errors\":\"Not Found\"}"
+    http_version:
+  recorded_at: Wed, 12 Nov 2014 17:57:02 GMT
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/customers.json?limit=50&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 12 Nov 2014 17:57:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/1da9c6f4-656f-43d5-8ace-adfd224494ee?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Fcustomers&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      Set-Cookie:
+      - _secure_admin_session_id=b37c762dc19303f5b0496afcfa3e3f1b; path=/; secure;
+        HttpOnly
+      X-Request-Id:
+      - 1da9c6f4-656f-43d5-8ace-adfd224494ee
+    body:
+      encoding: UTF-8
+      string: "{\"errors\":\"Not Found\"}"
+    http_version:
+  recorded_at: Wed, 12 Nov 2014 17:57:04 GMT
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/webhooks.json?limit=50&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 12 Nov 2014 17:57:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 404 Not Found
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/d4989065-c44a-4814-bd28-dca0edc29ac8?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Fwebhooks&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      Set-Cookie:
+      - _secure_admin_session_id=45f99f72efa779a8a9796ab9c067bda7; path=/; secure;
+        HttpOnly
+      X-Request-Id:
+      - d4989065-c44a-4814-bd28-dca0edc29ac8
+    body:
+      encoding: UTF-8
+      string: "{\"errors\":\"Not Found\"}"
+    http_version:
+  recorded_at: Wed, 12 Nov 2014 17:57:06 GMT
+recorded_with: VCR 2.9.0

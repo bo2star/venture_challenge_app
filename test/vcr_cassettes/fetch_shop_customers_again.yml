@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/customers.json?limit=50&page=1&since_id=309591383
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 26 Sep 2014 22:59:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/80056283-fe55-41d5-b86c-a31f4a123cf5?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Fcustomers&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      Http-X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      X-Stats-Userid:
+      - '0'
+      X-Stats-Apiclientid:
+      - '166773'
+      X-Stats-Apipermissionid:
+      - '7503229'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - _secure_admin_session_id=221b58342c7857fa8bbf452fabc6a003; path=/; secure;
+        HttpOnly
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 80056283-fe55-41d5-b86c-a31f4a123cf5
+      P3p:
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      X-Served-With:
+      - ZX_Spectrum/1997 (Sinclair_BASIC)
+    body:
+      encoding: UTF-8
+      string: "{\"customers\":[]}"
+    http_version: 
+  recorded_at: Fri, 26 Sep 2014 22:59:31 GMT
+recorded_with: VCR 2.9.0

@@ -1,0 +1,63 @@
+h5 Income Statement
+table.new-expense
+  thead
+    tr
+      th Sales
+      th[width="90px"]
+  tbody
+    - @products.each do |product|
+      tr
+        td
+          = product.name
+        td
+          = product.total_revenue.round(2)
+  tbody
+      tr
+        td
+          strong Total
+        td
+          strong= number_to_currency(team.total_revenue)
+table.new-expense
+  thead
+    tr
+      th Cost of Goods Sold
+      th[width="90px"]
+  tbody
+    - @products.each do |product|
+      tr
+        td
+          = product.name
+        td
+          = product.total_cost.round(2)
+  tbody
+    tr
+      td
+        strong Total
+      td
+        strong= number_to_currency(team.product_with_unit_cost)
+
+table.new-expense
+  thead
+    tr
+      th Operating Expenses
+      th[width="90px"]
+  tbody
+    - team.expenses.each do |expense|
+      tr
+        td
+          = expense.name
+        td
+          = expense.amount
+  tbody
+    tr
+      td
+        strong Total
+      td
+        strong= number_to_currency(team.fixed_cost)
+table.new-expense
+  tbody
+    tr
+      td
+        h5 Net Income
+      td[width="90px"]
+        strong[width="90px" style="border-bottom: 1px solid #000;text-decoration:underline;"]= number_to_currency(team.total_profit)

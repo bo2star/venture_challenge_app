@@ -1,0 +1,30 @@
+.row
+
+  h1.page-header
+    label.table-controls
+      | Seeds
+      input#toggle-seeds[type='checkbox']
+    | Students
+
+  table
+
+    thead
+      tr
+        th name
+        th email
+        th phone
+        th competition
+        th team
+        th[style='width: 30px']
+
+    tbody
+      - @students.each do |stud|
+        tr[data-seed=stud.competition.seeded?]
+          td= stud.name
+          td= stud.email
+          td= stud.phone
+          td= stud.competition && stud.competition.name
+          td= stud.team && stud.team.name
+          td.text-right
+            = link_to [:assume, :ops, stud], method: :put, target: '_blank' do
+              i.fa.fa-sign-in

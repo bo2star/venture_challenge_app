@@ -1,0 +1,91 @@
+---
+
+- name: Launch
+  code: launch
+  description: Launch your shop
+  points: 10
+  requires_shop: false
+
+- name: PR Genius
+  code: pr_genius
+  description: Get featured in an article online
+  points: 150
+  requires_shop: false
+
+- name: Charitably Savvy
+  code: charitably_savvy
+  description: Have your Charity endorse you
+  points: 100
+  requires_shop: false
+
+- name: Blogger
+  code: blogger
+  description: Blog about your Business
+  points: 25
+  requires_shop: false
+
+- name: Analytics
+  code: analytics
+  description: Add Google Analytics
+  points: 25
+  requires_shop: true
+
+- name: Twitter
+  code: twitter
+  description: 3 customers from Twitter
+  points: 100
+  requires_shop: true
+
+- name: Facebook
+  code: facebook
+  description: 3 customers from Facebook
+  points: 100
+  requires_shop: true
+
+- name: Pinterest
+  code: pinterest
+  description: 3 customers from Pinterest
+  points: 100
+  requires_shop: true
+
+- name: Instagram
+  code: instagram
+  description: 3 customers from Instagram
+  points: 100
+  requires_shop: true
+
+- name: SEM
+  code: sem
+  description: 3 customers from Adwords
+  points: 100
+  requires_shop: true
+
+- name: Lemonade Stand
+  code: lemonade_stand
+  description: Make $500 in sales
+  points: 25
+  requires_shop: true
+
+- name: Small Business
+  code: small_business
+  description: Make $1000 in sales
+  points: 25
+  requires_shop: true
+
+- name: Medium Business
+  code: medium_business
+  description: Make $1500 in sales
+  points: 25
+  requires_shop: true
+
+- name: Enterprise
+  code: enterprise
+  description: Make $2000 in sales
+  points: 25
+  requires_shop: true
+
+- name: Multi National
+  code: multi_national
+  description: Make $2500 in sales
+  points: 25
+  requires_shop: true

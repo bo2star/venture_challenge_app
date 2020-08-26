@@ -1,0 +1,74 @@
+.panel {
+  @include border-radius;
+
+  &.panel-video {
+    padding: 2px;
+  }
+
+  .panel-video-header {
+    border-bottom: 1px solid $border-color;
+    margin: 0 1rem;
+    padding: 1rem;
+    height: 65px;
+  }
+
+  .panel-header {
+    border-bottom: 1px solid $border-color;
+    margin: 0 -40px 20px -40px;
+    padding: 0 40px 20px 40px;
+  }
+
+  .panel-section {
+    border-bottom: 1px solid $border-color;
+    margin: 0 -40px 20px -40px;
+    padding: 0 40px 20px 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .panel-section-header {
+    @include light-font;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  &.panel-small {
+    padding: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $primary-font-color;
+  }
+
+  p {
+    color: $primary-font-color;
+  }
+
+  &.panel-link {
+    @include transition(background-color, 0.3s, ease);
+    @include transition(border-color, 0.3s, ease);
+
+    padding: 0;
+
+    > a {
+      display: block;
+      padding: 30px;
+    }
+
+    h4 {
+      color: $primary-color-strong;
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: $light-bg-color;
+      border-color: $primary-color;
+    }
+  }
+
+}

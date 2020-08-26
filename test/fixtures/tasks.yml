@@ -1,0 +1,43 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id            :integer          not null, primary key
+#  name          :string(255)
+#  description   :text
+#  points        :integer
+#  priority      :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#  code          :string(255)
+#  requires_shop :boolean          default("false")
+#  team_id       :integer          indexed
+#  response      :text
+#  completed_at  :datetime
+#
+# Indexes
+#
+#  index_tasks_on_team_id  (team_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  points: 1
+  priority: 1
+
+two:
+  name: MyString
+  description: MyText
+  points: 1
+  priority: 1
+
+launch:
+  name: Launch
+  code: launch
+  description: Launch your store
+  points: 10
+  requires_shop: false
+  team: bobs_team

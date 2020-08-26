@@ -1,0 +1,16 @@
+#learning-resources-edit.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'Learning Resources', admin_learning_resources_path
+      li= link_to @resource.title, [:admin, @resource]
+
+  h1.page-header Edit #{@resource.title}
+
+  = form_for [:admin, @resource] do |f|
+
+    = render 'form_fields', f: f
+
+    = link_to 'Cancel', [:admin, @resource], class: 'button secondary'
+    | &nbsp;
+    = f.submit 'Save', class: 'button'

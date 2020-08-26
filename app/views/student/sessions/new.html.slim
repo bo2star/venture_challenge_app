@@ -1,0 +1,15 @@
+#sessions-new.authentication.row
+
+  = image_tag 'logo.png', class: 'logo'
+  h1 VentureChallenge
+
+  h3 Please log in with LinkedIn to access your competition.
+
+  a.button.large.radius[href='/auth/linkedin']
+    | Log In &nbsp;
+    i.fa.fa-linkedin-square
+
+  p
+    | * You'll be redirected to the competition once you've logged in with LinkedIn.
+    br
+    = link_to 'Not on LinkedIn?', login_with_password_path

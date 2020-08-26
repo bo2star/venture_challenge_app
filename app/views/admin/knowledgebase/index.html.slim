@@ -1,0 +1,54 @@
+.row
+  .small-12.columns
+    h1.page-header.text-center
+      | Knowledgebase
+    p.lead.text-center
+      | Just getting started with the Venture Challenge? We've compiled all of our resources here to help you get started quickly and easily. You can take a tour of the Venture Challenge app, download grading resources or watch our video series on how to use the Venture Challenge in your course.
+
+    p.lead.text-center
+      = link_to "Tour", '#', id: "new-user-tour", class: "secondary button"
+
+      / =< link_to 'Download Course Pack', download_coursepack_admin_competitions_url, class: "secondary button"
+
+      =< link_to 'New competition', new_admin_competition_path, class: 'button', id: 'new-competition'
+
+.row
+  dl.tabs[data-tab]
+    dd.active
+      a[href="#panel1"]
+        div 1. Learning Resources
+    dd
+      a[href="#panel2"]
+        div 2. The Platform
+
+  .tabs-content
+    .content.active#panel1
+      <iframe src="https://drive.google.com/a/onlineventurechallenge.com/file/d/0BwRJ0wpj54HXbmZsSVUySE9kdlk/preview" width="100%" height="480"></iframe>
+
+    .content#panel2
+      <iframe src="https://drive.google.com/a/onlineventurechallenge.com/file/d/0BwRJ0wpj54HXVW1CZzY3aVZDTGs/preview" width="100%" height="480"></iframe>
+
+.row.videos
+  .medium-6.columns
+    = render partial: 'video', locals: { title: "Venture Challenge setup overview", src: "https://player.vimeo.com/video/126895025" }
+
+  .medium-6.columns
+    = render partial: 'video', locals: { title: "Venture Challenge exercise overview", src: "https://player.vimeo.com/video/119560532" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "Why should students partner with a charity?", src: "https://player.vimeo.com/video/120248089" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "What should students sell?", src: "https://player.vimeo.com/video/120248091" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "How should I assess this exercise?", src: "https://player.vimeo.com/video/120248093" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "How can I get students excited?", src: "https://player.vimeo.com/video/120248096" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "How do I run the Venture Challenge?", src: "https://player.vimeo.com/video/120248097" }
+
+  .medium-4.columns
+    = render partial: 'video', locals: { title: "What happens after the assignment is over?", src: "https://player.vimeo.com/video/121122463" }

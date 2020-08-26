@@ -1,0 +1,21 @@
+.contain-to-grid
+  nav.top-bar[data-topbar="" role="navigation"]
+
+    ul.title-area
+      li.name
+        h1 OPS
+
+      li.toggle-topbar.menu-icon
+        a[href="#"]
+          span
+
+    section.top-bar-section
+      ul
+        = nav_item ops_instructors_path do
+          | Instructors
+
+        = nav_item ops_competitions_path do
+          | Competitions
+
+        = nav_item ops_students_path do
+          | Students

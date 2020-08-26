@@ -1,0 +1,47 @@
+# == Schema Information
+#
+# Table name: learning_resources
+#
+#  id            :integer          not null, primary key
+#  title         :string(255)
+#  body          :text
+#  video_url     :string(255)
+#  instructor_id :integer          indexed
+#  order         :integer          default("0")
+#  is_template   :boolean          default("false")
+#  created_at    :datetime
+#  updated_at    :datetime
+#  is_published  :boolean          default("false")
+#  description   :text
+#  is_deleted    :boolean          default("false")
+#
+# Indexes
+#
+#  index_learning_resources_on_instructor_id  (instructor_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+unpublished:
+  title: Title 1
+  body: Body 1
+  video_url: http://youtu.be/191238235.mp4
+  instructor: mitch
+  order: 1
+
+published:
+  title: Title 2
+  body: Body 2
+  video_url: http://youtu.be/191238234.mp4
+  instructor: mitch
+  order: 2
+  is_published: true
+
+template:
+  title: Template 1
+  body: Template Body
+  video_url: http://youtu.be/391238234.mp4
+  instructor: admin
+  order: 3
+  is_template: true
+  is_published: true

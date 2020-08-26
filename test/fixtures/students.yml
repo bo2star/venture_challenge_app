@@ -1,0 +1,41 @@
+# == Schema Information
+#
+# Table name: students
+#
+#  id              :integer          not null, primary key
+#  competition_id  :integer          indexed
+#  team_id         :integer          indexed
+#  name            :string(255)
+#  email           :string(255)
+#  phone           :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  linkedin_uid    :string(255)      indexed
+#  linkedin_token  :text
+#  avatar_url      :string(255)
+#  password_digest :string(255)
+#
+# Indexes
+#
+#  index_students_on_competition_id  (competition_id)
+#  index_students_on_linkedin_uid    (linkedin_uid) UNIQUE
+#  index_students_on_team_id         (team_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bob:
+  name: Bob Marley
+  email: bob.marley@gmail.com
+  phone: 778-888-8888
+
+shirley:
+  name: Shirley Temple
+  email: shirley.temple@gmail.com
+  phone: 778-555-5555
+
+steve:
+  name: Steve Evets
+  email: bob.marley@gmail.com
+  phone: 778-888-8888
+  team: steves_team

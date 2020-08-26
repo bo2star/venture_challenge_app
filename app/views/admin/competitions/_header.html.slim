@@ -1,0 +1,20 @@
+header#competitions-header.clearfix
+
+  .breadcrumb-text
+    ul
+      li= link_to 'My Competitions', admin_competitions_path
+
+  h1.page-header
+    = competition.name
+
+    aside
+      .nav-pills-container.clearfix
+        ul.nav-pills
+          = nav_pill_item [:admin, competition] do
+            | Teams
+          = nav_pill_item [:edit, :admin, competition] do
+            | Settings
+          = nav_pill_item [:leaderboard, :admin, competition] do
+            | Leaderboard
+          = nav_pill_item [:history, :admin, competition] do
+            | History

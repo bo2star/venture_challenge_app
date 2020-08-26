@@ -1,0 +1,8 @@
+- if resource.errors.any?
+  .errors
+
+    h4 Woops
+
+    ul
+      - resource.errors.full_messages.each do |msg|
+        li= msg

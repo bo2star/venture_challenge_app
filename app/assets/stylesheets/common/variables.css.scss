@@ -1,0 +1,41 @@
+// Colors
+
+$primary-color: #1d5b67;
+$primary-color-strong: #1d5b67;
+$primary-color-light: rgb(16, 162, 184);
+
+$secondary-color: darken(#bdc3c7, 10%);
+$alert-color: #ff4c3d;
+
+$success-color: #27ae60;
+$success-color-strong: darken($success-color, 5%);
+
+$body-bg-color: rgb(244, 244, 245);
+$border-color: #e3e3e3;
+
+$muted-font-color: #bdc3c7;
+$strong-muted-font-color: #7f8c9a;
+$primary-font-color: rgb(52, 73, 94);
+
+$input-border-color: $border-color;
+$input-border-color-strong: $primary-color;
+
+$topbar-bg-color: rgba(47,47,47,1);
+$dark-bg-color: #34495e;
+$light-bg-color: #f7f9fa;
+
+
+// Typography
+
+$font-family-serif: 'Source Sans Pro', sans-serif;
+
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+
+// Other
+
+$global-radius: 6px;

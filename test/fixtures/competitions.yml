@@ -1,0 +1,39 @@
+# == Schema Information
+#
+# Table name: competitions
+#
+#  id            :integer          not null, primary key
+#  instructor_id :integer          indexed
+#  name          :string(255)
+#  start_date    :datetime
+#  end_date      :datetime
+#  welcome_note  :text
+#  token         :string(255)      indexed
+#  created_at    :datetime
+#  updated_at    :datetime
+#  message       :text
+#  is_seeded     :boolean          default("false")
+#
+# Indexes
+#
+#  index_competitions_on_instructor_id  (instructor_id)
+#  index_competitions_on_token          (token) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+killer_league:
+  instructor: mitch
+  name: Killer League
+  start_date: 2014-08-13 12:37:48
+  end_date: 2014-08-29 12:37:48
+  welcome_note: MyText
+  token: token1
+
+docile_league:
+  instructor: mitch
+  name: Docile League
+  start_date: 2014-09-12 12:37:48
+  end_date: 2014-09-12 12:37:48
+  welcome_note: MyText
+  token: token2

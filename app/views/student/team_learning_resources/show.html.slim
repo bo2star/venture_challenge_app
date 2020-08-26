@@ -1,0 +1,57 @@
+#team-learning-resources-show.row[ng-app="learningResourceApp" ng-cloak]
+  h1.page-header
+
+    - if nxt = @resource.next
+      = link_to nxt, class: 'next' do
+        i.fa.fa-chevron-right
+
+    - if previous = @resource.previous
+      = link_to previous, class: 'previous' do
+        i.fa.fa-chevron-left
+    | #{@resource.title}
+
+  .row
+
+    .large-6.columns
+
+      - if @resource.video_embed_url
+        iframe.video[width="484" height="315" src="#{@resource.video_embed_url}" frameborder="0" allowfullscreen]
+
+
+      p.lead= @resource.body.html_safe
+
+    .large-6.columns[ng-controller="TasksCtrl as vm"]
+
+      .tasks-panel.panel[ng-show="vm.tasks.length"]
+
+        h3 Tasks
+
+        form
+          ul.tasks
+            li.task[ng-repeat="task in vm.tasks" ng-class="{'task-complete': task.is_complete}"]
+              label.control.checkbox
+                input[type='checkbox' ng-model="task.is_complete" ng-change="vm.taskToggled(task)"]
+                span.control-indicator
+                | {{task.title}}
+
+      div[ng-controller="QuestionsCtrl"]
+        .panel[ng-repeat="question in questions"]
+
+          h3
+            | {{ question.title }}
+
+          .answers[ng-controller="AnswersCtrl"]
+
+            blockquote.answer[ng-repeat="answer in question.answers"]
+              | {{ answer.body }}
+              cite
+                | {{ answer.student_name }}, {{ answer.created_at | friendlyDate }}
+
+            form[ng-submit="submit()"]
+              textarea[rows=4 ng-model="newBody"]
+              input.button[type='submit' value='Answer']
+
+    - unless @resource.complete?
+      .text-center
+        = link_to @resource, method: :put, class: 'button large submit-resource' do
+          | &nbsp; Submit to Instructor

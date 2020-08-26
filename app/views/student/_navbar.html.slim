@@ -1,0 +1,42 @@
+nav.top-bar[data-topbar="" role="navigation"]
+
+  - if current_student
+
+    ul.title-area
+      li.name
+        h1
+          a[href="#"]= image_tag 'logo.png'
+
+      li.toggle-topbar.menu-icon
+        a[href="#"]
+          span
+
+    section.top-bar-section
+
+      - if current_team
+
+        ul
+          = nav_item team_path do
+            | Dashboard
+
+          = nav_item tasks_path do
+            | Tasks
+            - if current_team.pending_tasks.any?
+              span.label.round= current_team.pending_tasks.size
+
+          - if current_team.launched_shop?
+            = nav_item financials_path do
+              | Financials
+
+            = nav_item leaderboard_path, controller: 'student/competitions' do
+              | Leaderboard
+
+            = nav_item absolute_url(current_team.shop_url), target: '_blank' do
+              | Shop
+
+      ul.right
+        li= link_to 'https://onlineventurechallenge.uservoice.com/', 'data-tooltip' => true, title: 'Support', target: '_blank' do
+          i.fa.fa-support
+          |  Support
+        li= link_to logout_path, id: 'nav-item-logout', 'data-tooltip' => true, title: 'Log Out' do
+          i.fa.fa-sign-out

@@ -1,0 +1,48 @@
+#memberships-new {
+
+  & > header {
+    text-align: center;
+  }
+
+  .team-panel {
+
+    border-top-width: 3px;
+
+    a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    position: relative;
+
+    h4 {
+      margin-top: 28px;
+    }
+
+    .team-members {
+      .student {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media(max-width: 900px) {
+    .student {
+      margin-right: 5px;
+      > img {
+        width: 60px;
+      }
+    }
+  }
+
+  @media(max-width: 730px) {
+    .student {
+      display: none;
+    }
+
+    .team-panel h4 {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+}

@@ -1,0 +1,139 @@
+#financials.row[ng-app="financialsApp" ng-controller="FinancialsCtrl" ng-cloak data-financials=@financials]
+
+  .columns.large-8
+
+    h1 Financials
+
+    p Your team can earn extra points for every dollar of profit. Just keep track of your expenses here, and we'll do the rest.
+
+    p The VentureChallenge Financial Tool makes it easy for you to track your sales, expenses and profits. The app will do part of the work for you by tracking your sales in Shopify and automatically subtracting your Cost of Goods Sold/Unit Cost once you enter it in. Just follow these 3 simple steps on the right.
+
+    p[ng-show="incompleteProducts().length > 0" ng-bind-html="incompleteProductsMessage()"]
+
+    h4 Revenue
+
+    table[ng-show="model.products.length > 0"]
+      thead
+        tr
+          th Name
+          th[width="120px"] Quantity Sold
+          th[width="120px"] Revenue
+      tbody
+        tr[ng-repeat="product in model.products"]
+          td[] {{product.name}}
+          td[] {{product.quantity}}
+          td[] {{product.total_revenue | currency}}
+      tbody
+        tr
+          td[] <strong>Total Revenue</strong>
+          td[]
+          td[width="120px"] <strong>{{totalRevenue() | currency}}</strong>
+    p[ng-show="model.products.length == 0"]
+      | You don't have any revenue yet.
+
+    h4 Product Costs
+
+    table[ng-show="model.products.length > 0"]
+      thead
+        tr
+          th Name
+          th[width="120px"] Unit Cost
+          th[width="120px"] Quantity Sold
+          th[width="120px"] Total Cost
+      tbody
+        tr[ng-repeat="product in model.products"]
+          td[] {{product.name}}
+          td
+            span.dollar $
+            input[type="number" min="0" ng-model="product.unit_cost" placeholder="{{Product.defaultCost(product) | number : 2}}" ng-blur="save()"]
+          td[] {{product.quantity}}
+          td[] {{Product.cost(product) | currency}}
+      tbody
+        tr
+          td[] <strong>Total Product Costs</strong>
+          td[]
+          td[]
+          td[] <strong>({{totalProductCosts() | currency}})</strong>
+    p[ng-show="model.products.length == 0"]
+      | You haven't sold any products yet. When you do, come back here and fill out their unit cost so that we can start tracking profit for you.
+
+    h4 Expenses
+
+    table.expenses[ng-show="model.expenses.length > 0"]
+      thead
+        tr
+          th Name
+          th[width="90px"] Amount
+          th[width="30px"]
+      tbody
+        tr[ng-repeat="expense in model.expenses"]
+          td
+            input[type="text" ng-model="expense.name" placeholder="Name" ng-blur="save()"]
+          td
+            span.dollar $
+            input[type="number" min="0" ng-model="expense.amount" placeholder="Amount" ng-blur="save()"]
+          td.hidden-actions
+            a[ng-click="removeExpense(expense.uuid)"]
+              i.fa.fa-times
+      tbody
+        tr
+          td[] <strong>Total Expenses</strong>
+          td[] <strong>({{totalExpenses() | currency}})</strong>
+    p[ng-show="model.expenses.length == 0"]
+      | Add your fixed expenses. Don't forget advertisements, marketing, Shopify, and the Online Venture Challenge app itself.
+
+    table.new-expense
+      tr
+        td
+          input[type="text" ng-model="model.newExpense.name" placeholder="Add an expense"]
+        td[width="90px"]
+          span.dollar $
+          input[type="number" min="0" ng-model="model.newExpense.amount" placeholder="Amount"]
+        td[width="30px"]
+          a[ng-click="addExpense()"]
+            i.fa.fa-plus-circle
+
+    table.expenses[ng-show="model.expenses.length > 0"]
+      tbody
+        tr
+          td[] <strong>Net Profit</strong>
+          td[width="120px"] <strong>{{totalProfit() | currency}}</strong>
+
+  .columns.large-4.end.summary
+    br
+    h3 Instructions
+    .step.panel.panel-link
+      a.toggle
+        h4 1. Setup Products
+      .main
+        .row
+          .large-12.columns
+            p Add your products to your Shopify store and set the selling price.
+
+    .step.panel.panel-link
+      a.toggle
+        h4 2. Setup Unit Costs
+      .main
+        .row
+          .large-12.columns
+            p When a product is sold for the first time it will appear in the Financial Tool on your VentureChallenge Dashboard. You then need to add the Unit Cost or “Cost of Goods Sold” for each product. Unit Costs are calculated to only include the material costs you incur by making a sale.
+
+            p For example: Let’s assume you are selling scented candles that you bought in bulk. You bought a box of 100 candles for $50.00. When you make a sale you have to repackage the candle in a special box you had made for shipping. You bought 100 boxes for $20 and $20 of straw packing material. So every candle you sell will cost you $0.50 for the candle, $0.20 per box and $0.20 for the straw packing material, totaling $0.90.
+
+            p Do not include the Shipping Costs in this calculation as they will vary greatly depending on where you are shipping to, the shipping method and the size of the order. Shipping Costs will need to be recorded separately. The same is true for any other one-time or unique costs, like a larger box for shipping large orders.
+
+    .step.panel.panel-link
+      a.toggle
+        h4 3. Record Operating Expenses
+      .main
+        .row
+          .large-12.columns
+            p This is where all your other expenses need to be listed. Here are a few of the common expenses we expect to see:
+            ul
+              li VentureChallenge Sign Up Cost
+              li Shopify Subscription Fee
+              li Shipping Costs
+              li Advertising and Marketing Costs
+              li Excess Inventory*
+
+            p <strong>Excess Inventory</strong> - In the above example of a team selling scented candles, the product has been purchased and is being held as ‘Inventory.’  At the end of the competition, just calculate the value of anything you have leftover and include it in your Operating Expenses as Excess Inventory.

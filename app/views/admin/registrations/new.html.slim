@@ -1,0 +1,20 @@
+#registrations-new.authentication.row
+
+  = image_tag 'logo.png', class: 'logo'
+
+  h1 VentureChallenge
+
+  h3 Welcome! Let's get started by registering with LinkedIn.
+  h6 Are you a student? Use the link shared by your instructor, this page is for instructors only
+
+  a.button.large.radius[href='/auth/linkedin']
+    | Register &nbsp;
+    i.fa.fa-linkedin-square
+
+  p
+    | * You'll be taken back to VentureChallenge once you've logged in with LinkedIn.
+    br
+    = link_to 'Not on LinkedIn?', admin_signup_with_password_path
+    | &nbsp;
+    = link_to 'Already a member?', admin_login_path
+

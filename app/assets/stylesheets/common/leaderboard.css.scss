@@ -1,0 +1,123 @@
+#leaderboard-header {
+
+  h1.page-header > aside {
+    position: relative;
+    top: -8px;
+
+    @media(max-width: 510px) {
+      float: none;
+      display: block;
+    }
+  }
+
+  p.lead {
+    clear: both;
+  }
+
+}
+
+#leaderboard {
+
+  #points-chart {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+  }
+
+  .meter {
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-pills {
+    display: inline-block;
+  }
+
+  .progress {
+    height: 25px;
+    z-index: 1;
+    border: none;
+    padding: 0;
+    position: relative;
+    left: 80px;
+    background-color: white;
+    width: 85%;
+  }
+
+  h4 a {
+    font-weight: normal;
+  }
+
+  .badges {
+    @include transition(top, 0.3s, ease);
+    z-index: -1;
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    width: 100%;
+
+    img[alt="Learning resource"] ~ img[alt="Learning resource"]{
+      display:none;
+    }
+  }
+
+  .team-badge {
+    @include transition(margin-right, 0.3s, ease);
+    width: 40px;
+    margin-right: -15px;
+  }
+
+  .team-section {
+    position: relative;
+    padding-top: 45px;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+
+  .name {
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: absolute;
+    top: 42px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    z-index: 10;
+    line-height: 25px;
+    left: 95px;
+  }
+
+
+  .points {
+    @include light-font;
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    z-index: 15;
+    font-weight: bold;
+  }
+
+  .team-section:hover {
+    .badges {
+      top: 8px;
+    }
+
+    .name {
+      opacity: 1;
+    }
+
+    .team-badge {
+      margin-right: -4px;
+    }
+
+  }
+
+}

@@ -1,0 +1,17 @@
+#leaderboard-header.row
+
+  h1.page-header
+    | Leaderboard
+    aside
+      ul.nav-pills
+        = nav_pill_item '/leaderboard' do
+          | Overview
+        = nav_pill_item '/leaderboard/history' do
+          | History
+
+  p.lead
+
+    - if competition.ended?
+      | This competition is over. <strong>#{competition.leader.name}</strong> is the winner.
+    - else
+      | <strong>#{competition.leader.name}</strong> is in the lead with <strong>#{competition.leader_points.round}</strong> points. There are <strong>#{competition.days_remaining}</strong> days remaining in the competition.

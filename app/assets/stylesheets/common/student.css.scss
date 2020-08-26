@@ -1,0 +1,8 @@
+figure.student {
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  width: 60px;
+  img {
+    @include border-radius(100%);
+  }
+}

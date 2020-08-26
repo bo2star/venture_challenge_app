@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: teams
+#
+#  id                  :integer          not null, primary key
+#  competition_id      :integer          indexed
+#  name                :string(255)
+#  created_at          :datetime
+#  updated_at          :datetime
+#  color               :string(255)
+#  cached_total_points :integer          default("0")
+#  coupon_code         :string
+#
+# Indexes
+#
+#  index_teams_on_competition_id  (competition_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bobs_team:
+  competition: killer_league
+  name: Bobs Team
+
+steves_team:
+  competition: killer_league
+  name: Steves Team

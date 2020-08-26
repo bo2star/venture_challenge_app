@@ -1,0 +1,24 @@
+- if tasks.present?
+  table.new-expense
+    tbody
+      - tasks.decorate.each do |task|
+        tr
+          td.task[width="90px"]
+            .badge= image_tag task.badge_path
+          td
+            = task.name
+          td.response
+            - type = task.type
+            - if type.url_submission?
+              = link_to 'View Page', task.response, class: 'button tiny', target: '_blank'
+
+            - elsif type.text_submission?
+              = task.response
+
+            - elsif type.learning_resource?
+              = link_to 'Answers', [:admin, task.learning_resource], class: 'button tiny'
+
+            - else
+              i.fa.fa-check-circle
+- else
+  p No tasks completed

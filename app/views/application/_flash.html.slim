@@ -1,0 +1,6 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    .row
+      .alert-box.notice.radius[data-alert]
+        = content_tag :div, msg.html_safe
+        a[href="#" class="close"] &times;

@@ -1,0 +1,165 @@
+#competitions-show {
+
+  .invite-button {
+    text-align: center;
+
+    a {
+      margin-bottom: 0;
+    }
+  }
+
+  #teams-list {
+    text-align: center;
+  }
+
+  .team-panel {
+
+    border-top-width: 3px;
+
+    a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    position: relative;
+
+    h4 {
+      margin-bottom: 28px;
+      font-weight: normal;
+    }
+
+    .team-members {
+      .student {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .teamless {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .teams {
+    list-style: none;
+    margin-left: 0;
+    text-align: center;
+    margin-right: -20px;
+  }
+
+  .team {
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    .team-members {
+      @include border(solid 1px $border-color, bottom, left, right);
+      border-bottom-right-radius: $global-radius;
+      border-bottom-left-radius: $global-radius;
+
+      &:hover {
+        border-color: $secondary-color;
+      }
+    }
+
+    h4 {
+      color: white;
+      padding: 0.5rem;
+      margin: 0;
+      border-top-right-radius: $global-radius;
+      border-top-left-radius: $global-radius;
+    }
+
+    .actions {
+      margin-top: 10px;
+      a.button {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      display: block;
+      color: #666;
+    }
+
+    .student {
+      border: none;
+      padding: 20px;
+
+      figcaption {
+        background-color: transparent;
+        color: $primary-font-color;
+      }
+    }
+  }
+
+}
+
+
+#invite-students-modal {
+  .url {
+    @include border-radius;
+    font-family: $font-family-monospace;
+    padding: 18px 20px;
+    // border: 2px solid $border-color;
+    background-color: $light-bg-color;
+    // color: $primary-font-color;
+  }
+}
+
+#competitions-edit {
+
+  a.button, input.button {
+    margin-bottom: 0;
+  }
+
+  p.lead {
+    color: $strong-muted-font-color;
+  }
+
+}
+
+
+#competitions-index {
+
+  .orbit-container {
+    .orbit-next {
+      right: -10px;
+      > span {
+        border-left-color: $secondary-color;
+      }
+    }
+
+    .orbit-prev {
+      left: -10px;
+      > span {
+        border-right-color: $secondary-color;
+      }
+    }
+  }
+
+  .panel p.lead {
+    font-size: 18px;
+  }
+
+}
+
+
+#competitions-header {
+  .nav-pills-container {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+
+    .nav-pills {
+      display: inline-block;
+    }
+  }
+}
+
+.competition-form-fields {
+  // Pickadate makes fields "readonly". Keep the styling consistent.
+  input[readonly] {
+    background-color: white;
+  }
+}

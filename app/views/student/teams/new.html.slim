@@ -1,0 +1,16 @@
+#teams-new.row
+
+  h1 Create a new team
+
+  = form_for @form, url: team_path do |f|
+    = render 'application/errors', resource: @form
+
+    label
+      | Name
+      = f.text_field :name
+
+    = link_to 'Cancel', new_team_membership_path, class: 'button secondary'
+    | &nbsp;
+    = f.submit 'OK', class: 'button success'
+
+= track_form(current_student, 'Student onboarding', action: 'Created new team')

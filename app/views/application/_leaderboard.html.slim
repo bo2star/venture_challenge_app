@@ -1,0 +1,16 @@
+#leaderboard.row
+
+  - competition.teams_by_points.each do |team|
+
+    .team-section
+
+      - pct = (100.0 * team.cached_total_points) / competition.leader_points
+
+      .points[style="background-color: #{team.color};"]= team.cached_total_points.round
+
+      .progress
+        .meter[style="background-color: #{team.color}; width: #{pct}%"]
+
+      .badges= render 'team_badges', team: team
+
+      h4.name= link_to team.name, absolute_url(team.shop_url), target: '_blank'

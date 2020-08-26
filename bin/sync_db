@@ -1,0 +1,15 @@
+# Script to make development db sync to the production db.
+
+mkdir -p tmp/database_dumps
+
+STAMP=`date "+%s"`
+
+echo 'Backing up development database'
+pg_dump -Fc --no-acl --no-owner -h localhost venture_challenge_app_development > tmp/database_dumps/venture_challenge_app_development.$STAMP.dump
+
+echo 'Downloading production db from heroku'
+heroku pg:backups capture
+curl -o tmp/database_dumps/venture_challenge_app_production.$STAMP.dump `heroku pg:backups public-url | cat`
+
+echo 'Copying production db to development'
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -d venture_challenge_app_development tmp/database_dumps/venture_challenge_app_production.$STAMP.dump

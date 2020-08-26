@@ -1,0 +1,21 @@
+#sessions-new.authentication.row
+
+  = image_tag 'logo.png', class: 'logo'
+  h1 VentureChallenge
+
+  h3 Please log in with LinkedIn.
+
+  a.button.large.radius[href='/auth/linkedin']
+    | Instructor Log In &nbsp;
+    i.fa.fa-linkedin-square
+
+  br
+
+  = link_to 'Student Log in', login_url, class: 'button'
+
+  p
+    | * You'll be taken back to VentureChallenge once you've logged in with LinkedIn.
+    br
+    = link_to 'Not on LinkedIn?', login_with_password_path
+    | &nbsp;
+    = link_to 'Not yet a member?', admin_signup_path

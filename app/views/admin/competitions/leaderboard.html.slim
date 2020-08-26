@@ -1,0 +1,19 @@
+#competitions-leaderboard.row
+  = render 'header', competition: @competition
+
+  - if @competition.teams.any?
+    .row
+      .large-8.columns
+        - if @competition.ended?
+          | This competition is over. <strong>#{@competition.leader.name}</strong> is the winner.
+        - else
+          | <strong>#{@competition.leader.name}</strong> is in the lead with <strong>#{@competition.leader_points.round}<strong> points. There are <strong>#{@competition.days_remaining}</strong> days remaining in the competition.
+
+      .large-4.columns
+        = link_to 'Export Team Data', leaderboard_admin_competition_path(format: :csv), class: "secondary button right"
+
+
+    .row
+      = render 'admin_leaderboard', competition: @competition
+  - else
+    p.lead Once teams have formed you'll be able to see the leaderboard here.

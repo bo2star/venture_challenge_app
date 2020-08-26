@@ -1,0 +1,180 @@
+#learning-resources-index {
+
+  .learning-resource-list {
+    list-style: none;
+    margin-left: 0;
+
+    .learning-resource-item {
+
+      @extend .clearfix;
+      @extend .panel;
+      @extend .panel-link;
+      @extend .radius;
+
+      .handle {
+        @include muted-font;
+        float: left;
+        line-height: 30px;
+        font-size: 20px;
+        cursor: move;
+      }
+
+      .title {
+        margin-left: 20px;
+        float: left;
+        line-height: 27px;
+      }
+
+      .switch {
+        margin-left: 20px;
+        float: right;
+      }
+
+      .actions {
+        float: right;
+        margin-left: 10px;
+
+        .button {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+}
+
+#learning-resources-show {
+
+  button.success {
+    margin-bottom: 0;
+    position: relative;
+    left: -15px;
+    padding-bottom: 10px;
+  }
+
+  button.success {
+    margin-top: 3px;
+  }
+
+  .body {
+    p {
+      @include light-font;
+      color: $strong-muted-font-color;
+    }
+  }
+
+  .tasks {
+    h2 {
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .task {
+      @extend .clearfix;
+      line-height: 30px;
+
+      .task-handle {
+        color: $strong-muted-font-color;
+        display: inline;
+        margin-right: 10px;
+        opacity: 0.3;
+        cursor: move;
+      }
+
+      .task-title {
+        display: inline;
+        margin-right: 10px;
+        color: $primary-font-color;
+      }
+
+      .task-delete {
+        opacity: 0;
+        float: right;
+        color: $alert-color;
+      }
+
+      &:hover {
+        .task-delete {
+          opacity: 1;
+        }
+
+        .task-handle {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .questions {
+    h2 {
+      margin-top: 0;
+    }
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .question {
+      @extend .clearfix;
+      line-height: 30px;
+
+      .question-handle {
+        color: $strong-muted-font-color;
+        display: inline;
+        margin-right: 10px;
+        color: #aaa;
+        cursor: move;
+        opacity: 0.3;
+      }
+
+      .question-title {
+        display: inline;
+        margin-right: 10px;
+        color: $primary-font-color;
+      }
+
+      .question-delete {
+        opacity: 0;
+        float: right;
+        color: $alert-color;
+      }
+
+      &:hover {
+        .question-delete {
+          opacity: 1;
+        }
+
+        .question-handle {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+}
+
+#learning-resources-new, #learning-resources-edit {
+  label .redactor-editor {
+    text-transform: none;
+  }
+}
+
+
+#redactor-modal-box {
+  label {
+    text-transform: none;
+    color: #333;
+  }
+
+  header {
+    font-weight: 300;
+    font-size: 26px;
+  }
+
+  section {
+    padding: 10px 40px;
+  }
+}

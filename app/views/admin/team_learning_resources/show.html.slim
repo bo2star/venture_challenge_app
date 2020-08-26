@@ -1,0 +1,23 @@
+- team = @team_learning_resource.team
+
+#team-learning-resource-show.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'My Competitions', admin_competitions_path
+      li= link_to team.competition.name, [:admin, team.competition]
+      li= link_to team.name, [:admin, team]
+
+  h1.page-header= @team_learning_resource.title
+
+  - @team_learning_resource.questions.each do |question|
+    .panel
+      h4= question.title
+
+      - if question.answers.none?
+        p No answers
+
+      - question.answers.each do |answer|
+        blockquote.answer
+          = answer.body
+          cite #{answer.student.name}, #{answer.created_at.to_date}

@@ -1,0 +1,43 @@
+#competitions-show.row
+
+  = render 'header', competition: @competition
+
+  - if @competition.students.none?
+    p.lead This competition is empty. Click <strong>Invite your students</strong> below to invite some students.
+
+  - @competition.teams.each_slice(2) do |row|
+    .row[data-equalizer]
+      - row.each do |team|
+        .medium-6.columns
+          .team-panel.panel.panel-link[style="border-top-color: #{team.color}" data-equalizer-watch]
+            = link_to [:admin, team], class: 'clearfix' do
+              h4= team.name
+              .team-members= render partial: 'application/student', collection: team.students
+
+  - if @competition.teamless_students.any?
+    .teamless
+      .team-members= render partial: 'application/student', collection: @competition.teamless_students
+
+  .invite-button
+    a.button.large[href='#' data-reveal-id='invite-students-modal' data-activation='Invited Students'] Invite your students
+
+  br/
+
+  #invite-students-modal.reveal-modal[data-reveal]
+    h2 Invite your students
+
+    p.lead Share this unique URL with your students to let them join:
+
+    .small-10.columns[style='padding-left: 0;']
+      input#join-url.url[type="text" value=@competition.decorate.join_url onClick="this.select();"]
+
+    .small-2.columns
+      a#clip-url.button
+        | Copy
+
+      a#clipped-url.button.disabled[style='display: none;']
+        | Copied
+
+    a.close-reveal-modal &#215;
+
+= track_link(current_admin, 'data-activation', 'Instructor activation')

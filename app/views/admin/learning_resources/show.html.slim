@@ -1,0 +1,65 @@
+#learning-resources-show.row[ng-app="learningResourceApp" ng-cloak]
+
+  .breadcrumb-text
+    ul
+      li= link_to 'Learning Resources', admin_learning_resources_path
+
+  h1.page-header
+    aside
+      = link_to 'Edit', [:edit, :admin, @resource], class: 'button'
+    = @resource.title
+
+  .row
+
+    .large-6.columns.body
+
+      - if @resource.video_embed_url
+        iframe[width="410" height="315" src="#{@resource.video_embed_url}" frameborder="0" allowfullscreen]
+
+      = @resource.body.html_safe
+
+    .large-6.columns
+
+      .tasks.panel[ng-controller="TasksCtrl as vm"]
+
+        h2 Tasks
+
+        p[ng-show="vm.tasksEmpty()"] No tasks yet&hellip;
+
+        ul[ui-sortable="vm.sortableOptions" ng-model="vm.tasks"]
+          li.task[ng-repeat="task in vm.tasks"]
+            .task-handle
+              i.fa.fa-bars
+            .task-title
+              | {{ task.title }}
+            a.task-delete[ng-click="vm.removeTask(task)"]
+              i.fa.fa-trash
+
+        .row
+          form[ng-submit="vm.addTask()"]
+            .large-10.columns
+              input[type='text' ng-model="vm.newTitle" placeholder="Add a task…"]
+            .large-2.columns.left
+              button[type="submit"] Add
+
+      .questions.panel[ng-controller="QuestionsCtrl as vm"]
+
+        h2 Questions
+
+        p[ng-show="vm.questionsEmpty()"] No questions yet&hellip;
+
+        ul[ui-sortable="vm.sortableOptions" ng-model="vm.questions"]
+          li.question[ng-repeat="question in vm.questions"]
+            .question-handle
+              i.fa.fa-bars
+            .question-title
+              | {{ question.title }}
+            a.question-delete[ng-click="vm.removeQuestion(question)"]
+              i.fa.fa-trash
+
+        .row
+          form[ng-submit="vm.addQuestion()"]
+            .large-10.columns
+              input[type='text' ng-model="vm.newTitle" placeholder="Add a question…"]
+            .large-2.columns.left
+              button[type="submit"] Add

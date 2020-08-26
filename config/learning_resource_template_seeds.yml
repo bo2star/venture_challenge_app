@@ -1,0 +1,163 @@
+---
+- :title: Advanced  Validation
+  :body: "<p>This will help you Validate your idea with a broader range of potential
+    customers. In this experiment you will build a landing page and test to see how
+    potential customers respond.</p><p>Using a trial landing page builder such as
+    Lander, build a landing page that will ask potential customers for contact information.
+    With your landing page ready to go, use social media to attract potential customers
+    to your landing page. </p><p>The amount of visitors and conversions will give
+    you an indication of the demand for you product and service. It is recommended
+    to determine success metrics before setting up your landing page.</p><p><br></p>"
+  :video_url: http://youtu.be/8vC0HSMQC8E
+  :order: 2
+  :tasks:
+  - :title: Build Landing Page
+    :order: 1
+  - :title: Attract visitors to landing page through social media ect.
+    :order: 2
+  :questions:
+  - :title: How many visitors did your landing page have?
+    :order: 1
+  - :title: How many conversions did you have?
+    :order: 2
+- :title: Ideation
+  :body: "<p>The first ground for ideation is to avoid trying to come up with startup
+    ideas, look instead for problems, preferably ones that you have yourself. The
+    most common mistake entrepreneurs make in ideation is solve a problem that no
+    one really has, or wouldn't pay to solve.  </p><p>Problems, or unmet needs can
+    be found in many different forms, and their solution could mean a new product
+    or service, or perhaps just bringing that product or service to customers in an
+    untapped location or price point. There are many ways to carve out a niche or
+    create the next big market, but they start at the problem - not the solution.
+    </p><p><br></p>"
+  :video_url: ''
+  :order: 0
+  :tasks:
+  - :title: Discuss unmet customer needs
+    :order: 1
+  - :title: Make a list of potential ideas
+    :order: 2
+  - :title: Pick the idea you wish to proceed with
+    :order: 3
+  :questions:
+  - :title: What idea will you move forward with?
+    :order: 1
+- :title: Competition & Industry Analysis
+  :body: "<p>A competitive analysis will help you develop an effective marketing plan,
+    and help you determine where to set your pricing. You should also establish what
+    makes your product or service unique and therefore what attributes you play up
+    in order to attract your target market.</p><p>Taking a look at the industry as
+    a whole will provide statistics about the market potential of your business products
+    and services. <br></p><p>With this learning resource we want you to take a closer
+    look at the attractiveness of your industry, and how your business compares to
+    the competition.</p>"
+  :video_url: ''
+  :order: 4
+  :tasks:
+  - :title: Use naics.com to determine which industry your industry
+    :order: 1
+  - :title: Research your industry and competition
+    :order: 2
+  - :title: Look for relevant trademarks
+    :order: 3
+  :questions:
+  - :title: What is the growth (%) ?
+    :order: 3
+  - :title: Who are your closest competitors?
+    :order: 4
+  - :title: How do you differentiate?
+    :order: 5
+  - :title: What industry does your business belong to?
+    :order: 0
+  - :title: National industry size ($) ?
+    :order: 1
+  - :title: What are the trends in your industry?
+    :order: 2
+- :title: Planning
+  :body: "<p>The Business Model Canvas, is a strategic management and entrepreneurial
+    tool. It allows you to describe, design, challenge, invent, and pivot your business
+    model.</p><p><br></p><p><strong>Key Partners</strong></p><p>Who are our Key Partners?<br>Who
+    are our key suppliers?<br>Which Key Resources are we acquiring from partners?<br>Which
+    Key Activities do partners perform?</p><p><strong>Key Activities</strong></p><p>What
+    Key Activities do our Value Propositions require?<br>Our Distribution Channels?<br>Customer
+    Relationships?<br>Revenue streams?</p><p><strong>Value Propositions</strong></p><p>What
+    value do we deliver to the customer?<br>Which one of our customer's problems are
+    we helping to solve?<br>What bundles of products and services are we offering
+    to each Customer Segment?<br>Which customer needs are we satisfying?</p><p><strong>Customer
+    Relationships</strong></p><p>What type of relationship does each of our Customer<br>Segments
+    expect us to establish and maintain with them?<br>Which ones have we established?<br>How
+    are they integrated with the rest of our business model?<br>How costly are they?</p><p><strong>Customer
+    Segments</strong></p><p>For whom are we creating value?<br>Who are our most important
+    customers?</p><p><strong>Key Resources</strong></p><p>What Key Resources do our
+    Value Propositions require?<br>What scarce resource(s) do you control exclusively?
+    </p><p>Our Distribution Channels? Customer Relationships?<br>Revenue Streams?</p><p><strong>Channels</strong></p><p>Through
+    which Channels do our Customer Segments<br>want to be reached?<br>How are we reaching
+    them now?<br>How are our Channels integrated?<br>Which ones work best?<br>Which
+    ones are most cost-efficient?<br>How are we integrating them with customer routines?</p><p><strong>Cost
+    Structure</strong></p><p>What are the most important costs inherent in our business
+    model?<br>Which Key Resources are most expensive?<br>Which Key Activities are
+    most expensive?</p><p><strong>Revenue Streams</strong></p><p>For what value are
+    our customers really willing to pay?<br>For what do they currently pay?<br>How
+    are they currently paying?<br>How would they prefer to pay?<br>How much does each
+    Revenue Stream contribute to overall revenues?</p>"
+  :video_url: http://youtu.be/QoAOzMTLP5s
+  :order: 3
+  :tasks:
+  - :title: Watch the video
+    :order: 1
+  - :title: Fill out the business model canvas
+    :order: 2
+  - :title: Input answers bellow
+    :order: 3
+  :questions:
+  - :title: Key Partners?
+    :order: 1
+  - :title: Key Activities?
+    :order: 2
+  - :title: Value Propositions?
+    :order: 3
+  - :title: Customer Relationships?
+    :order: 4
+  - :title: Customer Segments?
+    :order: 5
+  - :title: Customer Segments?
+    :order: 6
+  - :title: Key Resources?
+    :order: 7
+  - :title: Channels?
+    :order: 8
+  - :title: Cost Structure?
+    :order: 9
+  - :title: Revenue Streams?
+    :order: 10
+- :title: Validation
+  :body: "<p>This learning resource will help you validate your business the most
+    basic way possible. Use the Validation board to test your assumptions and validate
+    your ideas. When setup correctly, validation experiments can help you focus on
+    the right things, and save you from wasting time based on inaccurate assumptions.
+    \ </p>"
+  :video_url: http://youtu.be/HhoducyStMw
+  :order: 1
+  :tasks:
+  - :title: Build Experiments that will test your assumptions, include success criteria.
+    :order: 2
+  - :title: If experiment does not meet success criteria, change your assumptions
+      and repeat the experiment
+    :order: 4
+  - :title: Fill out the hypothesis & assumption questions.
+    :order: 1
+  - :title: Go find at least 20 potential customers to run your experiment.
+    :order: 3
+  :questions:
+  - :title: What is your Customer Hypothesis?
+    :order: 1
+  - :title: What is your Problem Hypothesis?
+    :order: 2
+  - :title: What is your Solution Hypothesis?
+    :order: 3
+  - :title: What are your riskiest assumption?
+    :order: 4
+  - :title: What is your next riskiest assumption?
+    :order: 5
+  - :title: Report on how your experiment faired
+    :order: 6

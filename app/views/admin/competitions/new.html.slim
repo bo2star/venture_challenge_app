@@ -1,0 +1,16 @@
+#competitions-new.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'My Competitions', admin_competitions_path
+
+  h1.page-header New competition
+
+  = form_for [:admin, @competition] do |f|
+    = render 'form_fields', f: f
+
+    = link_to 'Cancel', admin_competitions_path, class: 'button secondary'
+    | &nbsp;
+    = f.submit 'Create competition', class: 'button'
+
+= track_form(current_admin, 'Instructor activation', action: 'Create new competition')

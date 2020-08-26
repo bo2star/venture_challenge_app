@@ -1,0 +1,19 @@
+#registrations-new.authentication.row
+
+  = image_tag 'logo.png', class: 'logo'
+  h1= @competition.name
+  h3 a VentureChallenge competition
+
+  - if @competition.message.present?
+    p.message= @competition.message
+
+  a.button.large.radius[href='/auth/linkedin']
+    | Join &nbsp;
+    i.fa.fa-linkedin-square
+
+  p
+    | * You'll be redirected to the competition once you've logged in with LinkedIn.
+    br
+    = link_to 'Not on LinkedIn?', join_with_password_path(token: @competition.token)
+    | &nbsp;
+    = link_to 'Already a member?', login_path

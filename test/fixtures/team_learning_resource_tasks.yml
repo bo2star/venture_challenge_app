@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: team_learning_resource_tasks
+#
+#  id                        :integer          not null, primary key
+#  title                     :string(255)
+#  order                     :integer          default("0")
+#  is_complete               :boolean
+#  team_learning_resource_id :integer
+#  created_at                :datetime
+#  updated_at                :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  order: 1
+  is_complete: false
+
+two:
+  title: MyString
+  order: 1
+  is_complete: false

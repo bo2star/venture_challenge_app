@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: shop_requests
+#
+#  id               :integer          not null, primary key
+#  team_id          :integer          indexed
+#  name             :string(255)
+#  url              :string(255)
+#  shopify_uid      :string(255)
+#  shopify_token    :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  confirmation_url :text
+#  is_pending       :boolean          default("true")
+#
+# Indexes
+#
+#  index_shop_requests_on_team_id  (team_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: bobs_team
+  name: My Shop
+  url: my-shop.myshopify.com
+  shopify_uid: 111
+  shopify_token: 222
+
+two:
+  team_id:
+  name: MyString
+  url: MyString
+  shopify_uid: MyString
+  shopify_token: MyString

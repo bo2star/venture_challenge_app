@@ -1,0 +1,2 @@
+- team.tasks.complete.each do |task|
+  = image_tag task.decorate.badge_path, width: 50, title: task.name, class: 'team-badge tip-top', 'data-tooltip' => true, id: "badge-for-task-#{task.id}"

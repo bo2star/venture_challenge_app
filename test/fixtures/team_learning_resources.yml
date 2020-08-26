@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: team_learning_resources
+#
+#  id         :integer          not null, primary key
+#  team_id    :integer          indexed
+#  order      :integer          default("0")
+#  title      :string(255)
+#  body       :text
+#  video_url  :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#  task_id    :integer          indexed
+#
+# Indexes
+#
+#  index_team_learning_resources_on_task_id  (task_id)
+#  index_team_learning_resources_on_team_id  (team_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: bobs_team
+  order: 1
+
+two:
+  team: bobs_team
+  order: 2

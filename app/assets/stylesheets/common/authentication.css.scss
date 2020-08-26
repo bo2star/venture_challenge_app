@@ -1,0 +1,26 @@
+.authentication {
+
+  text-align: center;
+
+  .logo {
+    height: 50px;
+  }
+
+  h3 {
+    @extend .subheader;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .fake {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  h3, a, p {
+    @include light-font;
+  }
+
+}

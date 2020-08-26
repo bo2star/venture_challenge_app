@@ -1,0 +1,48 @@
+header
+  h1.page-header= team.name
+
+main
+  .row
+    .large-6.columns
+      = render 'team_stats', team: team
+    .large-6.columns
+      .members= render partial: 'student', collection: team.students
+
+  dl.tabs[data-tab]
+
+    dd.active
+      a[href='#performance-content']
+        i.fa.fa-line-chart  Performance
+    dd
+      a[href='#tasks-content']
+        i.fa.fa-search  Insight
+
+    dd
+      a[href='#discussion-content']
+        i.fa.fa-comment  Discussion
+
+  .tabs-content
+
+    #performance-content.content.active
+      = render 'team_charts', team: team
+
+    #tasks-content.content
+      .row
+        .large-6.columns
+          h5 Completed Learning Resources
+          = render 'completed_task', tasks: team.tasks.complete.learning_resources
+        .large-6.columns
+          h5 Completed Tasks
+          = render 'completed_task', tasks: team.tasks.complete.other_tasks
+
+    #discussion-content.content
+      .row
+        .large-7.columns
+          .comments[ng-app="teamApp" ng-controller="TeamCommentsCtrl" ng-cloak]
+            blockquote.comment[ng-repeat="comment in comments"]
+              | {{ comment.body }}
+              cite
+                | {{ comment.creator_name }}, {{ comment.created_at | friendlyDate }}
+
+            textarea[placeholder="Discuss with this team..." ng-model="newBody"]
+            button.button.radius[ng-click="submit()"] Comment

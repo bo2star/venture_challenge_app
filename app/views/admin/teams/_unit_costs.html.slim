@@ -1,0 +1,19 @@
+h5 Unit Costs
+table.new-expense
+  thead
+    tr
+      th Name
+      th[width="90px"] Unit Cost
+      th[width="90px"] Unit Price
+      th[width="90px"] Gross margin
+  tbody
+    - products.each do |product|
+      tr
+        td
+          = product.name
+        td
+          = number_to_currency(product.unit_cost)
+        td
+          = number_to_currency(product.decorate.price)
+        td
+          = number_to_percentage(product.decorate.margin, precision: 2)

@@ -1,0 +1,5 @@
+<%- headers = ['Team Name', 'Rank', 'Points', 'Revenue', 'Product Expenses', 'Fixed Expenses', 'Profit','Orders','Customers' ] -%>
+<%= CSV.generate_line headers %>
+<%- @competition.teams.with_shop.each do |team| -%>
+<%= CSV.generate_line([team.name, team.rank, team.total_points.round, team.total_revenue.round, team.product_cost, team.fixed_cost, team.total_profit.round, team.total_orders, team.total_customers ]).html_safe %>
+<%- end -%>

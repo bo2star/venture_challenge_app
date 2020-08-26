@@ -1,0 +1,76 @@
+- task = task.decorate
+
+a[id="task-#{task.id}"]
+
+.task.panel.clearfix
+  .badge= image_tag task.badge_path
+
+  .points= task.points
+
+  h3= task.name
+  p.task-description= task.description
+
+  .task-body
+    - type = task.type
+
+    - if type.referral?
+      small= task.complete? ? 'Complete' : 'This task will be automatically marked as completed when you have enough referrals.'
+      p.alert <a href="https://onlineventurechallenge.uservoice.com/knowledgebase/articles/834900-scoring-social-media-sales-channel-referral-points" target="_blank">Please click here to refer to the FAQ article on Scoring Social Media Sales Channel Referral Points</a>
+
+    - if type.launch?
+
+      - if task.complete?
+        | Your shop has been launched.
+      - else
+        = link_to 'Launch your shop', new_shop_path, class: 'button'
+
+
+    - if type.url_submission?
+
+      - if task.complete?
+        = link_to 'View Page', task.response, class: 'button', target: '_blank'
+
+      - else
+
+        a.complete-task.button[href='#' data-reveal-id=task.modal_id] Submit your #{task.submission_name}
+
+        .reveal-modal[id=task.modal_id data-reveal]
+          h2 Enter your #{task.submission_name}'s URL
+
+          = form_for task do |f|
+            label
+              | URL
+              = f.url_field :response, required: true
+
+            = submit_tag 'Submit', class: 'button large'
+
+          a.close-reveal-modal &#215;
+
+
+    - if type.text_submission?
+
+      - if task.complete?
+        = task.response
+
+      - else
+
+        a.complete-task.button[href='#' data-reveal-id=task.modal_id] Submit analytics tracking id
+
+        .reveal-modal[id=task.modal_id data-reveal]
+          h2 Enter your google analytics tracking id
+
+          p Your Tracking ID is in the <a href="https://www.google.com/analytics/web/#management/Property" target="_blank">Tracking Info tab</a> on the Admin Page of Google Analytics.
+
+          = form_for task do |f|
+            label
+              | Tracking Id
+              = f.text_field :response, required: true
+
+            = submit_tag 'Submit', class: 'button large'
+
+          a.close-reveal-modal &#215;
+
+
+    - if type.learning_resource?
+      - btnText = task.complete? ? 'Review Answers' : 'View'
+      = link_to btnText, team_learning_resource_path(task.learning_resource), class: 'button'

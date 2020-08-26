@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://marinersinnonline.myshopify.com/admin/webhooks.json?limit=50&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - bdef681ecc9170eae84f008db27d6681
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 26 Sep 2014 22:32:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/aaef8f8f-f6e5-4ad5-b0b8-339556b60333?source%5Baction%5D=index&source%5Bcontroller%5D=admin%2Fwebhooks&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '5963473'
+      X-Shardid:
+      - '2'
+      X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      Http-X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      X-Stats-Userid:
+      - '0'
+      X-Stats-Apiclientid:
+      - '166773'
+      X-Stats-Apipermissionid:
+      - '7503229'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - _secure_admin_session_id=109c8612cad851e00c8440e65a266e0a; path=/; secure;
+        HttpOnly
+      - request_method=GET; path=/
+      X-Request-Id:
+      - aaef8f8f-f6e5-4ad5-b0b8-339556b60333
+      P3p:
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      X-Served-With:
+      - ZX_Spectrum/1997 (Sinclair_BASIC)
+    body:
+      encoding: UTF-8
+      string: "{\"webhooks\":[{\"address\":\"http://www.vchallenge.co/webhooks/orders/create\",\"created_at\":\"2014-07-28T23:15:56-07:00\",\"fields\":[],\"format\":\"json\",\"id\":6572435,\"metafield_namespaces\":[],\"topic\":\"orders/create\",\"updated_at\":\"2014-07-28T23:15:56-07:00\"},{\"address\":\"http://www.vchallenge.co/webhooks/customers/create\",\"created_at\":\"2014-07-28T23:15:56-07:00\",\"fields\":[],\"format\":\"json\",\"id\":6572439,\"metafield_namespaces\":[],\"topic\":\"customers/create\",\"updated_at\":\"2014-07-28T23:15:56-07:00\"}]}"
+    http_version: 
+  recorded_at: Fri, 26 Sep 2014 22:32:51 GMT
+recorded_with: VCR 2.9.0

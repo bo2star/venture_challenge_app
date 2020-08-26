@@ -1,0 +1,31 @@
+#shops-new.row
+
+  h1.page-header Launch your Shop
+
+  - if current_team.pending_shop_request?
+    - req = current_team.latest_pending_shop_request
+    p.lead
+      | Your team has already begun launching their shop, <em>#{req.shopify_uid}</em>. However, the Online Venture Challenge application
+      |  charge has not been accepted yet. Click below to accept the application charge and complete launching
+      |  your shop.
+
+    p
+      = link_to 'Complete Launch', req.confirmation_url, class: 'button'
+
+  - else
+
+    = form_for @form, url: shop_path do |f|
+      = render 'application/errors', resource: f.object
+
+      label
+        | Shopify URL
+        = f.text_field :url, placeholder: 'e.g. store-name.myshopify.com'
+        a.open-promo-code[href='#'] Have a promo code?
+        = f.text_field :coupon_code, placeholder: 'Enter you promo code', class: 'promo-code'
+
+
+      = link_to 'Cancel', :back, class: 'button secondary'
+      | &nbsp;
+      = f.submit 'Launch', class: 'button'
+
+= track_form(current_student, 'Student activation', action: 'Launched store', revenue: current_student.decorate.team_revenue)

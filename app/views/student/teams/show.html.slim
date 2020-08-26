@@ -1,0 +1,5 @@
+#teams-show
+  - partial = current_team.launched_shop? ? 'team_with_shop' : 'team_without_shop'
+  = render partial, team: current_team
+
+  = track_link(current_student, 'data-onboarding', 'Student onboarding') if !current_team.launched_shop?

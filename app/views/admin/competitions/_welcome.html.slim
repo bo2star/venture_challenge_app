@@ -1,0 +1,52 @@
+.row
+  .small-12.columns
+    h1.page-header.text-center
+      ' Welcome
+      = current_admin.name
+
+.row [data-equalizer=""]
+  .large-12.columns.text-center
+    h3 Get started in three easy steps!
+  .large-4.columns
+    a[href='#' data-reveal-id='overview-modal' data-onboarding='Launch Overview Video']
+      .panel.text-center [data-equalizer-watch=""]
+        i.fa.fa-3x.fa-bar-chart
+        h5 1. Learn how to use the Venture Challenge
+        p Learn how you can use the Venture Challenge to teach entrepreneurship.
+
+  .large-4.columns
+    = link_to admin_learning_resources_path, controller: 'admin/learning_resources', data: { onboarding: 'View Learning Resources' } do
+      .panel.text-center [data-equalizer-watch=""]
+        i.fa.fa-3x.fa-wrench
+          h5 2. Design your competition
+          p Choose which learning resources you want to make available to your students.
+
+  .large-4.columns
+    = link_to new_admin_competition_path, data: { onboarding: 'View new competition' } do
+      .panel.text-center [data-equalizer-watch=""]
+        i.fa.fa-3x.fa-trophy
+          h5 3. Create a competition & invite your students
+          p Enter the dates of the competition and invite your students to join.
+
+
+  br/
+
+  #overview-modal.reveal-modal[data-reveal]
+    h5 Venture Challenge Overview
+    .flex-video
+      iframe[src="https://player.vimeo.com/video/126895025" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen]
+
+
+    a.close-reveal-modal &#215;
+
+- # Show the example competition
+- if competition = @competitions.first && @competitions.first.decorate
+
+  p.text-center Want to see what an in-progress competition will look like? Click your example competition below.
+
+  .panel.panel-link
+    = link_to [:admin, competition], class: 'clearfix'
+      .pull-right= competition.date_range
+      h4= competition.name
+
+= track_link(current_admin, 'data-onboarding', 'Instructor onboarding')

@@ -1,0 +1,17 @@
+= render 'application/errors', resource: @resource
+
+.row
+  .large-12.columns
+    label
+      | Title
+      = f.text_field :title, required: true
+
+  .large-12.columns
+    label
+      | Video URL
+      = f.text_field :video_url, placeholder: 'Enter a youtube embed URL (e.g. http://youtu.be/7N8b3NZSJoY)'
+
+  .large-12.columns
+    label
+      | Body
+      = f.text_area :body, rows: 8

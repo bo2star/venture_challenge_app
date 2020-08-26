@@ -1,0 +1,9 @@
+#teams-show.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'My Competitions', admin_competitions_path
+      li= link_to @team.competition.name, [:admin, @team.competition]
+
+  - partial = @team.launched_shop? ? 'team_with_shop' : 'team_without_shop'
+  = render partial, team: @team

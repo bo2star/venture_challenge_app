@@ -1,0 +1,21 @@
+#team-charts
+
+  .tabs-content
+
+    #revenue-chart-content.content.active
+      = team_chart('revenue-chart', team, team.daily_revenue)
+
+    #customers-chart-content.content
+      = team_chart('customers-chart', team, team.daily_customers)
+
+    #orders-chart-content.content
+      = team_chart('orders-chart', team, team.daily_orders)
+
+  dl#team-charts-tabs.tabs[data-tab]
+
+    dd.active
+      a[href='#revenue-chart-content'] Revenue
+    dd
+      a[href='#customers-chart-content'] Customers
+    dd
+      a[href='#orders-chart-content'] Orders

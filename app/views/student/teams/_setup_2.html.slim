@@ -1,0 +1,27 @@
+.large-6.columns
+  .flex-video
+    iframe width="560" height="315" src="//www.youtube.com/embed/T-09nD1nhZQ" frameborder="0" allowfullscreen
+.large-6.columns
+  dl.tabs[data-tab]
+    dd.active
+      a[href="#panel1"]
+        div 1. Offsite setup
+    dd
+      a[href="#panel2"]
+        div 2. Onsite setup
+
+  .tabs-content
+    .content.active#panel1
+      ol
+        li <a href="http://www.google.com/analytics" target="_blank">Click here to go to Google Analytics</a> in a new window and create an account with the link in the top right corner.
+        li From the next page, click Sign in or create new account.
+        li Click Website, not Mobile app, and fill out the form. Enter your primary domain for the Web Site URL. You can ignore the checkboxes at the bottom.
+        li Click Get Tracking ID at the bottom of the page to complete signup.
+        li On the next page, you'll see a lot of information and options. The only thing you need is the code snippet that Google provides.
+        li Copy this code snippet to your clipboard.
+    .content#panel2
+      ol
+        li Open your Shopify store Admin in a new browser window.
+        li In your Shopify Admin, go to the <strong>Settings</strong> page and then <strong>Online Store</strong> page.
+        li Then paste your Tracking code into the Google Analytics code field.
+        li You’ll need to remove password protection to enable Google Analytics, but we will do that when we are ready to launch the store.

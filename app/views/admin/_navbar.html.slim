@@ -1,0 +1,33 @@
+.contain-to-grid
+  nav.top-bar[data-topbar="" role="navigation"]
+
+    - if current_admin
+
+      ul.title-area
+        li.name
+          h1
+            a[href="#"]= image_tag 'logo.png'
+
+        li.toggle-topbar.menu-icon
+          a[href="#"]
+            span
+
+      section.top-bar-section
+
+        ul
+          = nav_item admin_competitions_path, controller: 'admin/competitions', id: "competitions" do
+            | Competitions
+
+          = nav_item admin_learning_resources_path, controller: 'admin/learning_resources', id: "nav-item-learning-resources" do
+            | Learning Resources
+
+          = nav_item admin_knowledgebase_index_path, controller: 'admin/knowledgebase', id: "nav-item-knowledgebase" do
+            | Knowledgebase
+
+
+        ul.right
+          li= link_to 'https://onlineventurechallenge.uservoice.com/', 'data-tooltip' => true, title: 'Support', target: '_blank' do
+            i.fa.fa-support
+            |  Support
+          li= link_to logout_path, id: 'nav-item-logout', 'data-tooltip' => true, title: 'Log Out' do
+            i.fa.fa-sign-out

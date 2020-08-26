@@ -1,0 +1,235 @@
+// Top Bar
+
+.top-bar {
+  .title-area img {
+    position: relative;
+    top: -2px;
+    width: 50px;
+  }
+
+  .top-bar-section {
+    a {
+      letter-spacing: 0.75px;
+    }
+  }
+
+  li > a > i {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+  }
+
+}
+
+
+// Breadcrumbs
+
+.breadcrumb-text {
+  position: relative;
+  top: 30px;
+  color: $muted-font-color;
+
+  ul {
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: $primary-color-light;
+      text-decoration: none;
+
+      &:after {
+        margin: 0 9px 0 9px;
+        font-weight: normal;
+        color: $muted-font-color;
+        content: "/";
+      }
+    }
+  }
+}
+
+
+// Buttons
+
+a.button, input.button, button {
+  @include border-radius;
+  letter-spacing: 0.75px;
+  font-size: 12px;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .15);
+  &:active {
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+a.button.large, input.button.large {
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+
+// Typography
+
+h1.page-header, h3.page-header {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  aside {
+    float: right;
+    line-height: 50px;
+    position: relative;
+    top: -10px;
+
+    .nav-pills {
+      margin-top: 20px;
+    }
+  }
+}
+
+p.lead {
+  @include light-font;
+  color: $strong-muted-font-color;
+}
+
+a {
+  color: $primary-color-light;
+}
+
+blockquote {
+  color: $primary-font-color;
+  border-left-width: 2px;
+}
+
+
+// Alerts
+
+.alert-box {
+  border-radius: 6px;
+  background-color: #f7f9fa;
+  border-color: #e9ecef !important;
+
+}
+
+// Nav-pills
+
+$active-pill-color: darken($primary-color, 5%);
+
+.nav-pills {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 0;
+
+
+  > li {
+    float: left;
+    position: relative;
+    display: block;
+
+    > a {
+      @include transition(background-color, 0.3s, ease);
+      padding: 12px 21px 13px;
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1;
+      color: #fff;
+      background-color: $primary-color;
+      border-left: 2px solid $active-pill-color;
+      border-radius: 0;
+      outline: none;
+      position: relative;
+      display: block;
+
+      &:hover {
+        background-color: lighten($primary-color, 3%);
+      }
+    }
+
+    &:first-child > a {
+      border-left: none;
+      border-radius: 6px 0 0 6px;
+    }
+
+    &:last-child > a {
+      border-radius: 0 6px 6px 0;
+    }
+
+    &.active > a {
+      background-color: $active-pill-color;
+      color: #fff;
+    }
+  }
+}
+
+// Tabs
+
+dl.tabs {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: 0;
+
+  > dd {
+    float: left;
+    position: relative;
+    display: block;
+
+    > a {
+      @include transition(background-color, 0.3s, ease);
+      padding: 12px 21px 13px;
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1;
+      color: #fff;
+      background-color: $primary-color;
+      border-left: 2px solid $active-pill-color;
+      border-radius: 0;
+      outline: none;
+      position: relative;
+      display: block;
+
+      &:hover {
+        background-color: lighten($primary-color, 3%);
+      }
+    }
+
+    &:first-child > a {
+      border-left: none;
+      border-radius: 6px 0 0 6px;
+    }
+
+    &:last-child > a {
+      border-radius: 0 6px 6px 0;
+    }
+
+    &.active > a {
+      background-color: $active-pill-color;
+      color: #fff;
+    }
+  }
+}
+
+// Fix forms fields for firefox (height doesn't work properly)
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+  padding: 8px 15px !important;
+  height: inherit;
+}
+
+
+// Angular cloaking
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.badge {
+  display: inline-block;
+}

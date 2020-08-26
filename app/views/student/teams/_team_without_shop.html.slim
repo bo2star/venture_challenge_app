@@ -1,0 +1,71 @@
+.team-without-shop.row
+
+  h1.page-header
+    = team.name
+    aside
+      - if team.only_member?(current_student)
+        = link_to 'Leave and delete this team', team_path, method: :delete, class: 'button alert'
+      - else
+        = link_to 'Leave this team', team_membership_path, method: :delete, class: 'button alert'
+
+  .members-panel
+    = render partial: 'student', collection: team.students
+    h4
+      - unless current_competition.started?
+        | #{pluralize(current_competition.days_until_start, 'day')} to live competition
+
+  dl.tabs[data-tab]
+
+    dd.active
+      a[href='#getting-started']
+        i.fa.fa-rocket  Getting Started
+
+    dd
+      a[href='#discussion-content']
+        i.fa.fa-comment  Discussion
+
+  .tabs-content
+    #getting-started.content.active
+      h3 Getting Started
+      p.lead This is your team's dashboard. Once you've launched your shop you'll see your team's points and stats here.
+
+      .step.panel.panel-link
+        a.toggle[ data-onboarding='Viewed before you start' ]
+          h4 Before You Start
+        main
+          .row= render 'setup_0'
+
+      .step.panel.panel-link
+        a.toggle[ data-onboarding='Viewed initial setup' ]
+          h4 1. Initial Setup
+        main
+          .row= render 'setup_1'
+
+      .step.panel.panel-link
+        a.toggle[ data-onboarding='Viewed setup Google Analytics' ]
+          h4 2. Setup Google Analytics
+        main
+          .row= render 'setup_2'
+
+      .step.panel.panel-link
+        a.toggle[ data-onboarding='Viewed setup payments' ]
+          h4 3. Setup Payments
+        main
+          .row= render 'setup_3'
+
+      .step.panel.panel-link
+        a.toggle[ data-onboarding='Viewed launch your shop' ]
+          h4 4. Launch your shop
+        main
+          .row= render 'setup_4'
+    #discussion-content.content
+      .row
+        .large-7.columns
+          .comments[ng-app="teamApp" ng-controller="TeamCommentsCtrl" ng-cloak]
+            blockquote.comment[ng-repeat="comment in comments"]
+              | {{ comment.body }}
+              cite
+                | {{ comment.creator_name }}, {{ comment.created_at | friendlyDate }}
+
+            textarea[placeholder="Discuss with this team..." ng-model="newBody"]
+            button.button.radius[ng-click="submit()"] Comment

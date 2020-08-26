@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: learning_resource_questions
+#
+#  id                   :integer          not null, primary key
+#  title                :string(255)
+#  order                :integer          default("0")
+#  learning_resource_id :integer          indexed
+#  created_at           :datetime
+#  updated_at           :datetime
+#
+# Indexes
+#
+#  index_learning_resource_questions_on_learning_resource_id  (learning_resource_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+template_question:
+  title: Was it cool?
+  order: 1
+  learning_resource: template
+

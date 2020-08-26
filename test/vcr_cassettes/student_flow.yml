@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://shoes-for-humanity.myshopify.com/admin/application_charges/701373.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Shopify-Access-Token:
+      - 2c0887bb02f475d7887c6d613ff1b337
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 04 Jan 2015 01:26:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block; report=/xss-report/28aa9fec-572e-4754-b57a-1ea0b994cfc0?source%5Baction%5D=show&source%5Bcontroller%5D=admin%2Fapplication_charges&source%5Bsection%5D=admin
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      X-Shopid:
+      - '6497707'
+      X-Shardid:
+      - '2'
+      X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      Http-X-Shopify-Shop-Api-Call-Limit:
+      - 1/40
+      X-Stats-Userid:
+      - '0'
+      X-Stats-Apiclientid:
+      - '331927'
+      X-Stats-Apipermissionid:
+      - '8371109'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - _secure_admin_session_id=bbb1f8594f91bded9bcf831012cbbff7; path=/; secure;
+        HttpOnly
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 28aa9fec-572e-4754-b57a-1ea0b994cfc0
+      P3p:
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      - CP="NOI DSP COR NID ADMa OPTa OUR NOR"
+      X-Served-With:
+      - ZX_Spectrum/1997 (Sinclair_BASIC)
+    body:
+      encoding: UTF-8
+      string: '{"application_charge":{"api_client_id":331927,"created_at":"2015-01-03T13:10:10-05:00","id":701373,"name":"Online
+        Venture Challenge","price":"25.00","return_url":"http://app.lvh.me:3000/shop_confirmation_callback","status":"accepted","test":true,"updated_at":"2015-01-03T13:20:56-05:00","charge_type":null,"decorated_return_url":"http://app.lvh.me:3000/shop_confirmation_callback?charge_id=701373"}}'
+    http_version:
+  recorded_at: Sun, 04 Jan 2015 01:26:35 GMT
+recorded_with: VCR 2.9.0

@@ -1,0 +1,30 @@
+.contain-to-grid {
+  border-bottom: 5px solid #bf4820;
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+.top-bar .title-area .name {
+  margin-left: 0px;
+  margin-right: 20px;
+  h1 {
+    color: white;
+    font-weight: 700;
+  }
+}
+
+table tr[data-seed] {
+  display: none;
+}
+
+.table-controls {
+  float: right;
+  position: relative;
+  top: 12px;
+
+  input {
+    margin-left: 6px;
+    position: relative;
+    font-size: 20px;
+  }
+}

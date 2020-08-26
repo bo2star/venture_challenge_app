@@ -1,0 +1,80 @@
+#team-learning-resources-show {
+
+  h1 {
+    text-align: center;
+  }
+
+  .video {
+    margin-bottom: 20px;
+  }
+
+  .previous {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
+
+  .previous, .next {
+    font-size: 25px;
+    position: relative;
+    top: 15px;
+  }
+
+  .tasks-panel {
+  }
+
+  .tasks {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .task {
+    input {
+      margin-right: 10px;
+    }
+  }
+
+  .answer {
+    // @include light-font;
+    border-left-color: $border-color;
+
+    cite {
+      color: $strong-muted-font-color;
+      font-style: normal;
+    }
+  }
+
+  .tasks label {
+    text-transform: none;
+    font-weight: normal;
+    color: $strong-muted-font-color;
+  }
+
+  .tasks input[type='checkbox'] {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .task .control-indicator {
+    margin-top: 4px;
+  }
+
+  .task.task-complete label {
+    text-decoration: line-through;
+    color: $muted-font-color;
+  }
+
+  a.button {
+    margin-bottom: 0;
+  }
+
+  a.submit-resource {
+    width: 300px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+}

@@ -1,0 +1,38 @@
+.team-with-shop[ng-app="teamApp"]
+
+  - if team.pending_financials?
+    .alert-box
+      | Good job! You've sold #{team.shop.pending_products.map { |p| "<em>#{p.name}</em>" }.join(' and ').html_safe}.
+      | <br>To earn extra points for each dollar of profit, update your #{link_to('team financials', financials_path)} with your products' unit costs.
+
+  .team-stats
+    = render 'team_stats', team: team
+
+  .team-identity
+    h1= team.name
+    .members= render partial: 'student', collection: team.students
+
+
+  .team-body
+    
+    .team-body-left
+      = render 'team_charts', team: team
+    
+    .team-body-right[ng-controller="TeamCommentsCtrl" ng-cloak]
+      .comments
+        blockquote.comment[ng-repeat="comment in comments"]
+          | {{ comment.body }}
+          cite
+            | {{ comment.creator_name }}, {{ comment.created_at | friendlyDate }}
+
+      .no-comments[ng-show="comments.length == 0"]
+        i.fa.fa-comment-o
+
+
+      textarea[placeholder="Discuss with your team and instructor..." ng-model="newBody"]
+      button.button.radius[ng-click="submit()"] Comment
+
+  .team-badges
+    - team.tasks.decorate.each do |task|
+      a[href=task.path title=task.tooltip data-tooltip id="badge-for-task-#{task.id}" class="tip-top"]
+        = image_tag task.badge_path, class: task.complete? ? 'badge badge-complete' : 'badge'

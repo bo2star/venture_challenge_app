@@ -1,0 +1,44 @@
+.large-6.columns
+  .flex-video
+    iframe width="560" height="315" src="//www.youtube.com/embed/qVmbVpQY-98" frameborder="0" allowfullscreen
+.large-6.columns
+  ol
+    li Add products
+    li Select a theme
+    li Setup Shipping rates
+    li Select a Shopify plan
+    i We recommend the $29/month basic plan as it gives you everything you need to get started and includes the option for you to offer discount coupons and receive over the phone support from Shopify's fantastic Customer Assistance team.
+    br
+    br
+    i If you are pinching your pennies then you should know that, while Shopify does not advertise it anywhere, they do offer a $14 per month 'Starter' plan, which just might work for you.
+    br
+    br
+    li Before your team can accumulate points from sales, you must add the Venture Challenge app to your store. Click "Launch" below to add the app to your store and begin the competition.
+    br
+    i When you add the VentureChallenge app to your store you will need to pay $25 per team member.  Make sure that all of your team members have joined your team before completing this step.  By default there is a minimum charge of $100 (4 team members) built in. If you have a team of less than 4 please ask your instructor to contact the VentureChallenge support team to issue you with a price adjustment coupon.
+  .text-center
+    - if current_team.pending_shop_request?
+      -# In the exceptional case that the team has a pending shop request, we want to show them a message
+      -# and button to continue that request instead of starting a new one. We take the user directly to
+      -# the shops#new page where that message and button will be displayed.
+      = link_to 'Launch', new_shop_path, class: 'button large'
+    - else
+      = link_to 'Launch', '#', class: 'button large', 'data-reveal-id' => 'launch-shop-modal'
+
+#launch-shop-modal.reveal-modal[data-reveal]
+  h2 Launch your shop
+  b Before you launch your shop please ensure all team members have joined the Venture Challenge.
+  -# p You will be charged $25.00 per team member on the same credit card you use to pay for your Shopify plan.
+  = form_for ShopForm.new, url: shop_path do |f|
+
+    label
+      | Shopify URL
+      = f.text_field :url, placeholder: 'e.g. store-name.myshopify.com'
+      | Have a promo Code?
+      = f.text_field :coupon_code, placeholder: 'Team smaller than 4?'
+
+    = f.submit 'Launch', class: 'button large'
+
+  a.close-reveal-modal &#215;
+
+= track_form(current_student, 'Student activation', action: 'Launched store', revenue: current_student.decorate.team_revenue)

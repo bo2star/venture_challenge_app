@@ -1,0 +1,17 @@
+#competitions-index.row
+
+  - if current_admin.competitions.live.empty?
+    = render 'welcome'
+  - else
+    h1.page-header
+      aside
+        = link_to 'New competition', new_admin_competition_path, class: 'button', id: 'new-competition'
+      | My Competitions
+
+    - @competitions.each do |competition|
+      - competition = competition.decorate
+      .panel.panel-link
+        = link_to [:admin, competition], class: 'clearfix'
+          .pull-right= competition.date_range
+          h4= competition.name
+

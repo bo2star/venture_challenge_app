@@ -1,0 +1,174 @@
+# == Schema Information
+#
+# Table name: orders
+#
+#  id               :integer          not null, primary key
+#  shop_id          :integer          indexed
+#  uid              :string(255)      indexed
+#  placed_at        :datetime
+#  created_at       :datetime
+#  updated_at       :datetime
+#  subtotal_price   :decimal(8, 2)
+#  total_tax        :decimal(8, 2)
+#  total_discounts  :decimal(8, 2)
+#  total_price      :decimal(8, 2)
+#  customer_uid     :string(255)
+#  financial_status :string           default("paid")
+#
+# Indexes
+#
+#  index_orders_on_shop_id  (shop_id)
+#  index_orders_on_uid      (uid) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+1266172947:
+  shop: bobs_pants
+  uid: '1266172947'
+  placed_at: 2014-08-27 03:42:44.000000000 Z
+  subtotal_price: 45.0
+  total_tax: 5.4
+  total_discounts: 0.0
+  total_price: 58.4
+  customer_uid: '1304471635'
+
+1265753659:
+  shop: bobs_pants
+  uid: '1265753659'
+  placed_at: 2014-08-25 03:54:33.000000000 Z
+  subtotal_price: 10
+  total_tax: 0.0
+  total_discounts: 0.0
+  total_price: 10
+  customer_uid: '1256019791'
+
+1265753575:
+  shop: bobs_pants
+  uid: '1265753575'
+  placed_at: 2014-08-25 03:52:26.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265753539:
+  shop: bobs_pants
+  uid: '1265753539'
+  placed_at: 2014-08-25 03:51:17.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265753463:
+  shop: bobs_pants
+  uid: '1265753463'
+  placed_at: 2014-08-25 03:50:10.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265753415:
+  shop: bobs_pants
+  uid: '1265753415'
+  placed_at: 2014-08-25 03:49:15.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265753355:
+  shop: bobs_pants
+  uid: '1265753355'
+  placed_at: 2014-08-25 03:48:07.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265753327:
+  shop: bobs_pants
+  uid: '1265753327'
+  placed_at: 2014-08-25 03:47:06.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265582319:
+  shop: bobs_pants
+  uid: '1265582319'
+  placed_at: 2014-08-22 20:22:34.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265575523:
+  shop: bobs_pants
+  uid: '1265575523'
+  placed_at: 2014-08-22 19:37:20.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.1E2
+  customer_uid: '1256019791'
+
+1265521463:
+  shop: bobs_pants
+  uid: '1265521463'
+  placed_at: 2014-08-22 11:54:31.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.1E2
+  total_tax: !ruby/object:BigDecimal 18:0.13E1
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.113E2
+  customer_uid: '1256019791'
+
+1265059107:
+  shop: bobs_pants
+  uid: '1265059107'
+  placed_at: 2014-08-19 21:30:16.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.94E2
+  total_tax: !ruby/object:BigDecimal 18:0.1128E2
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.10528E3
+  customer_uid: '1246202499'
+
+1264727823:
+  shop: bobs_pants
+  uid: '1264727823'
+  placed_at: 2014-08-16 05:17:46.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.28E2
+  total_tax: !ruby/object:BigDecimal 18:0.42E1
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.402E2
+  customer_uid: '1253861419'
+
+1263905267:
+  shop: bobs_pants
+  uid: '1263905267'
+  placed_at: 2014-08-07 03:12:07.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.28E2
+  total_tax: !ruby/object:BigDecimal 18:0.336E1
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.3136E2
+  customer_uid: '1252251887'
+
+1263353435:
+  shop: bobs_pants
+  uid: '1263353435'
+  placed_at: 2014-07-31 06:03:37.000000000 Z
+  subtotal_price: !ruby/object:BigDecimal 18:0.5E1
+  total_tax: !ruby/object:BigDecimal 18:0.6E0
+  total_discounts: !ruby/object:BigDecimal 18:0.0
+  total_price: !ruby/object:BigDecimal 18:0.136E2
+  customer_uid: '1246201731'

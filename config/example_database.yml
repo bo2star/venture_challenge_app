@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: venture_challenge_app_development
+  pool: 5
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: venture_challenge_app_test
+  pool: 5
+  password:

@@ -1,0 +1,22 @@
+.stats
+  .stats-label.stats-label-1
+    | #{team.rank}#{team.rank.ordinal}
+    br
+    small place
+  .stats-label.stats-label-2
+    | #{team.cached_total_points.round}
+    br
+    small points
+  .stats-label.stats-label-3
+    | $#{team.total_revenue.round}
+    br
+    small revenue
+
+  .stats-label.stats-label-4
+    | $#{team.total_profit.round}
+    br
+    small profit
+  .stats-label.stats-label-5
+    | #{team.total_customers}
+    br
+    small customers

@@ -1,0 +1,26 @@
+.row
+
+  .breadcrumb-text
+    ul
+      li= link_to 'Instructors', ops_instructors_path
+
+  h1.page-header
+    .pull-right
+      small
+        = link_to 'Seed Competition', [:seed_competition, :ops, @instructor], method: :put, class: 'button alert', data: { confirm: 'Are you sure?' }
+        =< link_to 'Delete', [:ops, @instructor], target: '_blank', method: :delete, class: 'button alert',
+              data: { confirm: @instructor.seeded? ? 'Are you sure?' : 'STOP! HOLD IT! This will completely remove this instructor, all their competitions, students, etc. Are you absolutely sure this is OK?' }
+        =< link_to 'Assume', [:assume, :ops, @instructor], target: '_blank', method: :put, class: 'button'
+
+
+
+    = @instructor.name
+
+  - @instructor.competitions.each do |competition|
+    .panel.panel-link
+      = link_to [:ops, competition], class: 'clearfix' do
+        h4= competition.name
+        #{competition.start_date.to_date}&nbsp;to&nbsp;#{competition.end_date.to_date}
+
+  - if @instructor.competitions.none?
+    p.lead No competitions

@@ -1,0 +1,37 @@
+# == Schema Information
+#
+# Table name: shops
+#
+#  id                       :integer          not null, primary key
+#  team_id                  :integer          indexed
+#  name                     :string(255)
+#  url                      :string(255)      indexed
+#  webhooks_last_checked_at :datetime
+#  created_at               :datetime
+#  updated_at               :datetime
+#  shopify_uid              :string(255)      indexed
+#  shopify_token            :string(255)
+#
+# Indexes
+#
+#  index_shops_on_shopify_uid  (shopify_uid) UNIQUE
+#  index_shops_on_team_id      (team_id)
+#  index_shops_on_url          (url) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# Store with VCR-recorded live orders/customers.
+mariners_inn:
+  name: Mariners Inn Online
+  url: marinersinnonline.myshopify.com
+  webhooks_last_checked_at: 2014-09-12 13:15:38
+  shopify_uid: 'marinersinnonline.myshopify.com'
+  shopify_token: 'bdef681ecc9170eae84f008db27d6681'
+
+# Store with fixture orders/customers.
+bobs_pants:
+  team: bobs_team
+  name: Bobs Pants Online
+  url: bobspants.myshopify.com
+

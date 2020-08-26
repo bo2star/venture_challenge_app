@@ -1,0 +1,73 @@
+# == Schema Information
+#
+# Table name: customers
+#
+#  id          :integer          not null, primary key
+#  shop_id     :integer          indexed
+#  uid         :string(255)      indexed
+#  email       :string(255)
+#  acquired_at :datetime
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+# Indexes
+#
+#  index_customers_on_shop_id  (shop_id)
+#  index_customers_on_uid      (uid) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+11309591383:
+  shop: bobs_pants
+  uid: '11309591383'
+  email: sallyn313@gmail.com
+  acquired_at: 2014-09-19 00:12:27.000000000 Z
+
+1304471635:
+  shop: bobs_pants
+  uid: '1304471635'
+  email: rjdeed@shaw.ca
+  acquired_at: 2014-08-27 03:40:14.000000000 Z
+
+1256019791:
+  shop: bobs_pants
+  uid: '1256019791'
+  email: natjrru@gmail.com
+  acquired_at: 2014-08-22 11:53:23.000000000 Z
+
+1253861419:
+  shop: bobs_pants
+  uid: '1253861419'
+  email: kailey.loadman@gmail.com
+  acquired_at: 2014-08-16 05:16:51.000000000 Z
+
+1252647891:
+  shop: bobs_pants
+  uid: '1252647891'
+  email: candace_wells@telus.net
+  acquired_at: 2014-08-09 15:58:17.000000000 Z
+
+1252251887:
+  shop: bobs_pants
+  uid: '1252251887'
+  email: kelalee@hotmail.com
+  acquired_at: 2014-08-07 03:10:23.000000000 Z
+
+1246591087:
+  shop: bobs_pants
+  uid: '1246591087'
+  email: michelle.goodwin@gmail.com
+  acquired_at: 2014-07-31 23:40:39.000000000 Z
+
+1246202499:
+  shop: bobs_pants
+  uid: '1246202499'
+  email: dgalpin@keatscamps.com
+  acquired_at: 2014-07-31 06:36:05.000000000 Z
+
+1246201731:
+  shop: bobs_pants
+  uid: '1246201731'
+  email: calvincarlick@gmail.com
+  acquired_at: 2014-07-31 06:03:16.000000000 Z

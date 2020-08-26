@@ -1,0 +1,7 @@
+#competitions-leaderboard.row
+  = render 'header', competition: @competition
+
+  - if @competition.teams.any?
+    #leaderboard.panel= leaderboard_chart(@competition)
+  - else
+    p.lead Once teams have formed you'll be able to see a graph of team points over time here.

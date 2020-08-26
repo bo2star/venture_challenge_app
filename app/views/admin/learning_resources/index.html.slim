@@ -1,0 +1,45 @@
+#learning-resources-index.row[ng-app="learningResourceListApp" ng-controller="AppCtrl as vm" ng-cloak]
+
+  .intro.panel
+    h3 Setup your Competition
+    p Learning Resources are the framework on which your competition is built. They provide education, support and the outline for your students' experience.  You can customize any of our built in resources or unpublish them as necessary.  You can also build your own custom learning resources.
+
+    p Remember that when you create a competition it will import all of the active learning resources and outcomes that you select here.  Any later edits you make to the learning resources will not be reflected in your live competitions.
+
+    p
+      ' Watch the
+      a[href='#' data-reveal-id='overview-modal'] getting started overview video
+      '  to learn how to setup learning resources.
+
+  h3.page-header
+    aside
+      = link_to 'New learning resource', new_admin_learning_resource_path, class: 'button'
+    | My Learning Resources
+
+  ul.learning-resource-list[ui-sortable="vm.sortableOptions" ng-model="vm.resources"]
+    li.learning-resource-item[ng-repeat="resource in vm.resources"]
+      a.learning-resource-link.clearfix[ng-href="{{resource.url}}"]
+        .handle
+          i.fa.fa-bars
+
+        h4.title
+          | {{ resource.title }}
+
+        .switch.small.round
+          input[id="toggle-resource-{{resource.id}}" type='checkbox' ng-model="resource.is_published" ng-change="vm.publishToggled(resource)"]
+          label[for="toggle-resource-{{resource.id}}"]
+
+        .pull-right
+
+          .label.radius[ng-show="resource.is_published"] Published
+          .label.secondary.radius[ng-hide="resource.is_published"] Draft
+
+    br/
+
+    #overview-modal.reveal-modal[data-reveal]
+      h5 Venture Challenge Overview
+      .flex-video
+        iframe[src="https://player.vimeo.com/video/126895025" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen]
+
+
+      a.close-reveal-modal &#215;

@@ -1,0 +1,107 @@
+#tasks-index {
+
+  .task {
+    background-color: $light-bg-color;
+
+    .badge {
+      float: left;
+      width: 100px;
+      margin-right: 20px;
+    }
+
+    .points {
+      @include light-font;
+      font-size: 24px;
+      float: right;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+      top: 24px;
+      color: $primary-color-strong;
+      border-radius: 100%;
+      border: 2px solid $primary-color;
+      height: 55px;
+      width: 55px;
+      margin-left: 10px;
+    }
+
+    a.button {
+      margin-bottom: 0;
+    }
+
+    .task-body {
+      margin-left: 100px;
+
+      p.alert {
+        background: #FFD6D6;
+        padding: 10px 20px 10px 20px;
+        border-radius: 4px;
+        width: 85%;
+        text-align: center;
+      }
+    }
+
+    .task-body small {
+      @include light-font;
+      font-size: 14px;
+    }
+
+  }
+
+  .completed-tasks {
+    display: none;
+
+    .task {
+      background-color: white;
+    }
+
+    .points {
+      background-color: $success-color;
+      color: white;
+    }
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  @media(max-width: 750px) {
+    .task {
+      .badge {
+        width: 70px;
+      }
+
+      .task-body {
+        margin-left: 90px;
+      }
+    }
+  }
+
+  @media(max-width: 550px) {
+    .task {
+      position: relative;
+
+      > h3 {
+        position: relative;
+        top: 20px;
+      }
+
+      > .points {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+      }
+
+      > p {
+        clear: left;
+        padding-top: 10px;
+      }
+
+      .task-body {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+}

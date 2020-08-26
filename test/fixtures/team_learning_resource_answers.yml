@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: team_learning_resource_answers
+#
+#  id          :integer          not null, primary key
+#  body        :text
+#  student_id  :integer          indexed
+#  question_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+# Indexes
+#
+#  index_team_learning_resource_answers_on_student_id  (student_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  student_id: 
+  question_id: 1
+
+two:
+  body: MyText
+  student_id: 
+  question_id: 1

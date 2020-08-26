@@ -1,0 +1,24 @@
+.row
+
+  h1.page-header
+    label.table-controls
+      | Seeds
+      input#toggle-seeds[type='checkbox']
+    | Competitions
+  table
+
+    thead
+      tr
+        th name
+        th start_date
+        th end_date
+        th instructor
+
+    tbody
+      - @competitions.each do |competition|
+		- if competition
+			tr[data-seed=competition.seeded?]
+			  td= link_to competition.name, ops_competition_path(competition)
+			  td= competition.start_date
+			  td= competition.end_date
+			  td= competition.instructor.name

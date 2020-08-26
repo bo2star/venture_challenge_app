@@ -1,0 +1,116 @@
+#financials {
+
+  table {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding-bottom: .625rem;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: transparent;
+  }
+
+  td {
+    padding: .250rem .625rem;
+  }
+
+  td.hidden-actions {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  tr:hover td.hidden-actions {
+    opacity: 1;
+  }
+
+  input[type="text"], input[type="number"] {
+    border: none;
+    padding: 5px 10px 5px 0 !important;
+    border-bottom: 1px dashed #999;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  input[type="number"] {
+    width: 55px;
+    padding: 5px 0 !important;
+    float: left;
+  }
+
+  .new-expense {
+    padding-bottom: 0;
+    input[type="text"], input[type="number"] {
+      border-bottom: none;
+    }
+  }
+
+  .expenses {
+    input[type="text"], input[type="number"] {
+      border-bottom-color: transparent;
+    }
+
+    tr:hover {
+      input[type="text"], input[type="number"] {
+        border-bottom-color: #999;
+      }
+    }
+  }
+
+  .dollar {
+    float: left;
+    position: relative;
+    top: 5px;
+    margin-right: 3px;
+  }
+
+  .fa-times {
+    color: #e65784;
+  }
+
+  i {
+    font-size: 18px;
+    position: relative;
+    right: 5px;
+    top: 3px;
+  }
+
+  dd {
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: -18px;
+  }
+
+  dt {
+    opacity: .5;
+    font-weight: bold;
+  }
+
+  dl {
+    text-align: left;
+    font-size: 30px;
+  }
+
+  dt.profit {
+    font-size: 40px;
+  }
+
+  dd.profit {
+    font-size: 16px;
+  }
+
+  .panel-link {
+    @extend .panel-link;
+  }
+
+  .step {
+    > .main {
+      display: none;
+    }
+
+    .main {
+      padding: 20px;
+    }
+  }
+
+}

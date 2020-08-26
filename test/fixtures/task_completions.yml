@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: task_completions
+#
+#  id         :integer          not null, primary key
+#  task_id    :integer          indexed
+#  team_id    :integer          indexed
+#  data       :hstore
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_task_completions_on_task_id  (task_id)
+#  index_task_completions_on_team_id  (team_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_id: 
+  team_id: 
+  data: 
+
+two:
+  task_id: 
+  team_id: 
+  data: 
